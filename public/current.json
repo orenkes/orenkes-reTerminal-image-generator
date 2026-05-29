@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-05-29T16:57:45.572Z",
+  "locationName": "Jerusalem",
+  "lat": 31.7683,
+  "lon": 35.2137,
+  "dateLabel": "29 May 2026",
+  "dayLabel": "Friday",
+  "weekdayIndex": 5,
+  "weather": {
+    "code": 63,
+    "theme": "rain",
+    "label": "Rain",
+    "summary": "Steady rainfall",
+    "tempMax": 28,
+    "tempMin": 22,
+    "source": "fallback",
+    "error": "fetch failed"
+  },
+  "style": {
+    "name": "Cinema Friday",
+    "accent": "#f77f00",
+    "secondary": "#ffd166",
+    "vibe": "cinematic lighting and dramatic contrast"
+  },
+  "imageUrl": "/current.svg",
+  "prompt": "Create a single high-quality poster-style image for a fixed daily display. No logos, no watermark, no UI chrome. Leave room for a clear headline and weather summary. Location: Jerusalem. Date: 29 May 2026. Weather: Rain (Steady rainfall), high 28C, low 22C. Art direction: Cinema Friday with cinematic lighting and dramatic contrast. The result should feel calm, intentional, and readable on an e-ink screen."
+}
