@@ -33,7 +33,7 @@ async function loadEnvFile() {
   }
 }
 
-const port = Number(process.env.PORT || 8080);
+const port = Number(process.env.PORT || 8081);
 
 const NO_CACHE_PATHS = new Set([
   "/current.html",
