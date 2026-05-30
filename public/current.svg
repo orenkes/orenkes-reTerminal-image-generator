@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200" role="img" aria-labelledby="title desc">
     <title id="title">Daily image for Jerusalem</title>
-    <desc id="desc">Create a single high-quality poster-style image for a fixed daily display. No logos, no watermark, no UI chrome. Leave room for a clear headline and weather summary. Location: Jerusalem. Date: 29 May 2026. Weather: Rain (Steady rainfall), high 28C, low 22C. Art direction: Cinema Friday with cinematic lighting and dramatic contrast. The result should feel calm, intentional, and readable on an e-ink screen.</desc>
+    <desc id="desc">Create a single high-quality poster-style image for a fixed daily display. No logos, no watermark, no UI chrome. Leave room for a clear headline and weather summary. Location: Jerusalem. Date: 30 May 2026. Weather: Rain showers (Passing bursts of rain), high 30C, low 24C. Art direction: Playful Saturday with playful, slightly surreal. The result should feel calm, intentional, and readable on an e-ink screen.</desc>
     
     <defs>
       <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -55,16 +55,16 @@
 
     <g transform="translate(170 190)">
       <text x="0" y="0" fill="rgba(255,255,255,0.88)" font-size="34" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" letter-spacing="4">JERUSALEM</text>
-      <text x="0" y="86" fill="#eef4ff" font-size="86" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Friday</text>
-      <text x="0" y="160" fill="#eef4ff" font-size="38" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">29 May 2026</text>
+      <text x="0" y="86" fill="#eef4ff" font-size="86" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Saturday</text>
+      <text x="0" y="160" fill="#eef4ff" font-size="38" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">30 May 2026</text>
 
       <g transform="translate(0 230)">
         <rect x="0" y="0" width="660" height="520" rx="34" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.18)"/>
         <text x="46" y="74" fill="#eef4ff" font-size="34" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Weather today</text>
-        <text x="46" y="156" fill="#eef4ff" font-size="70" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Steady rainfall</text>
-        <text x="46" y="228" fill="#eef4ff" font-size="34" font-weight="500" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Rain</text>
-        <text x="46" y="340" fill="#eef4ff" font-size="112" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">25°</text>
-        <text x="50" y="398" fill="#eef4ff" font-size="28" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">High 28° / Low 22°</text>
+        <text x="46" y="156" fill="#eef4ff" font-size="70" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Passing bursts of rain</text>
+        <text x="46" y="228" fill="#eef4ff" font-size="34" font-weight="500" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Rain showers</text>
+        <text x="46" y="340" fill="#eef4ff" font-size="112" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">27°</text>
+        <text x="50" y="398" fill="#eef4ff" font-size="28" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">High 30° / Low 24°</text>
         <text x="50" y="452" fill="#eef4ff" font-size="24" opacity="0.78" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Source: fallback (fetch failed)</text>
       </g>
     </g>
@@ -72,18 +72,18 @@
     <g transform="translate(860 210)">
       <rect x="0" y="0" width="620" height="780" rx="40" fill="rgba(0,0,0,0.08)" stroke="rgba(255,255,255,0.16)"/>
       <text x="46" y="70" fill="rgba(255,255,255,0.8)" font-size="28" letter-spacing="3" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">AI PROMPT IDEA</text>
-      <rect x="46" y="96" width="126" height="14" rx="7" fill="#f77f00"/>
-      <rect x="180" y="96" width="126" height="14" rx="7" fill="#ffd166"/>
-      <text x="46" y="136" fill="white" font-size="42" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Cinema Friday</text>
-      <text x="46" y="190" fill="rgba(255,255,255,0.86)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">cinematic lighting and dramatic contrast</text>
+      <rect x="46" y="96" width="126" height="14" rx="7" fill="#2a9d8f"/>
+      <rect x="180" y="96" width="126" height="14" rx="7" fill="#90e0ef"/>
+      <text x="46" y="136" fill="white" font-size="42" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Playful Saturday</text>
+      <text x="46" y="190" fill="rgba(255,255,255,0.86)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">playful, slightly surreal</text>
       <text x="46" y="260" fill="rgba(255,255,255,0.88)" font-size="28" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Day context</text>
-      <text x="46" y="308" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Friday</text>
-      <text x="46" y="348" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• 29 May 2026</text>
-      <text x="46" y="388" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Rain</text>
-      <text x="46" y="428" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Steady rainfall</text>
+      <text x="46" y="308" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Saturday</text>
+      <text x="46" y="348" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• 30 May 2026</text>
+      <text x="46" y="388" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Rain showers</text>
+      <text x="46" y="428" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">• Passing bursts of rain</text>
       <text x="46" y="500" fill="rgba(255,255,255,0.88)" font-size="28" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Style</text>
-      <text x="46" y="548" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">cinematic lighting and dramatic contrast</text>
-      <text x="46" y="590" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">28° / 22°</text>
+      <text x="46" y="548" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">playful, slightly surreal</text>
+      <text x="46" y="590" fill="rgba(255,255,255,0.92)" font-size="24" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">30° / 24°</text>
       <rect x="46" y="620" width="528" height="92" rx="24" fill="rgba(255,255,255,0.12)"/>
       <text x="74" y="675" fill="white" font-size="26" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Constant image URL: /current.svg</text>
     </g>

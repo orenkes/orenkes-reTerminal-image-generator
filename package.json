@@ -5,6 +5,12 @@
   "scripts": {
     "build": "node scripts/prototype.mjs build",
     "dev": "node scripts/prototype.mjs dev",
-    "serve": "node scripts/prototype.mjs serve"
+    "serve": "node scripts/prototype.mjs serve",
+    "generate:morning": "node scripts/prototype.mjs generate morning",
+    "generate:evening": "node scripts/prototype.mjs generate evening",
+    "generate:openai-bg": "BACKGROUND_PROVIDER=openai node scripts/prototype.mjs generate morning",
+    "rebuild:current": "node scripts/prototype.mjs rebuild",
+    "status": "node scripts/prototype.mjs status",
+    "tick": "node scripts/prototype.mjs tick"
   }
 }

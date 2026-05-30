@@ -1,0 +1,5 @@
+.env
+.env.local
+public/current.png
+public/current.jpg
+public/current.svg

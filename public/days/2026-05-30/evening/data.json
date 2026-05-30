@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-05-30T15:00:39.708Z",
+  "date": "2026-05-30",
+  "slot": "evening",
+  "locationName": "חולון",
+  "lat": 32.0171,
+  "lon": 34.7454,
+  "timeZone": "Asia/Jerusalem",
+  "weather": {
+    "source": "open-meteo",
+    "locationLine": "חולון, ישראל",
+    "dateLine": "יום שבת, 30 במאי 2026",
+    "today": {
+      "summary": "מעונן חלקית",
+      "tempRange": "20-25",
+      "humidity": 60,
+      "periods": [
+        {
+          "name": "בוקר",
+          "label": "מעונן חלקית",
+          "icon": "partly",
+          "temp": 22
+        },
+        {
+          "name": "צהריים",
+          "label": "בהיר ברובו",
+          "icon": "sun",
+          "temp": 25
+        },
+        {
+          "name": "ערב",
+          "label": "בהיר ברובו",
+          "icon": "sun",
+          "temp": 23
+        }
+      ]
+    },
+    "ahead": [
+      {
+        "dayLabel": "יום ראשון",
+        "high": 26,
+        "low": 20,
+        "icon": "partly",
+        "label": "מעונן"
+      },
+      {
+        "dayLabel": "יום שני",
+        "high": 25,
+        "low": 19,
+        "icon": "partly",
+        "label": "מעונן חלקית"
+      },
+      {
+        "dayLabel": "יום שלישי",
+        "high": 26,
+        "low": 19,
+        "icon": "partly",
+        "label": "מעונן חלקית"
+      }
+    ],
+    "hero": {
+      "icon": "partly",
+      "summary": "מעונן חלקית",
+      "tempHigh": 25,
+      "sunrise": "05:36",
+      "sunset": "19:40",
+      "wind": "רוח מתונה · 17 קמ״ש",
+      "trend": "מחר מזג דומה"
+    }
+  },
+  "background": {
+    "source": "openai",
+    "provider": "openai",
+    "localPath": "/Users/orenkesler/personal/reTerminal-image-generator/public/days/2026-05-30/evening/bg.jpg",
+    "imageUrl": "bg.jpg",
+    "model": "gpt-image-1-mini",
+    "style": "urban",
+    "slot": "evening",
+    "dateKey": "2026-05-30",
+    "theme": "cloudy",
+    "prompt": "Create ONE complete 800x480 landscape background image for a weather screen. The white UI areas are part of this image itself (not a separate overlay layer). Layout baked into the image: - Right ~46% width, full height: flat solid pure white (#FFFFFF), completely empty — reserved for Hebrew location and summary text that will be drawn on top later. - Bottom ~44% height, full width: flat solid pure white (#FFFFFF), completely empty — reserved for forecast text on top later. - Top-left only (~54% width, upper ~56% height): weather-themed illustration and sky. The white zones must be smooth, uniform #FFFFFF with no texture, shadow, gradient, or decoration. White panels must look like blank printer paper: RGB 255,255,255 — high contrast against the artwork. Do not let clouds, fog, or artwork bleed into the right or bottom white panels. Art style for this calendar day (same style for morning and evening): urban cityscape, architecture rooftops streets, metropolitan atmosphere. Time of day for this image: evening. Lighting: evening atmosphere: golden hour or dusk, warm low light, long soft shadows, sky with sunset oranges and purples, end-of-day calm. Weather in the artwork must match: soft cloudy sky, diffused daylight, calm atmosphere. Temperature feel in the scene: mild comfortable temperatures. Conditions: מעונן חלקית. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "size": "1536x1024",
+    "quality": "low"
+  },
+  "prompt": "Create a single watercolor landscape poster for an e-ink weather display. No logos, no watermark, no UI chrome. Leave clear space on the right for Hebrew text overlay. Location mood: חולון, ישראל. Weather today: מעונן חלקית. Ahead: יום ראשון 26/20, יום שני 25/19, יום שלישי 26/19. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
+}
