@@ -10,6 +10,7 @@ import {
 import path from "node:path";
 import { fetchBackground, getBackgroundProvider } from "./background.mjs";
 import { BACKGROUND_STYLES, pickStyleForDate } from "./background-theme.mjs";
+import { renderHtmlToPng } from "./html-to-png.mjs";
 import { fetchWeather } from "./weather.mjs";
 import { buildHtml, buildPrompt } from "./render.mjs";
 
@@ -136,6 +137,7 @@ export async function rebuildCurrentHtml(options = {}) {
   const data = JSON.parse(await readFile(dataPath, "utf8"));
   const html = htmlForCurrentDisplay(data);
   await writeFile(path.join(config.publicDir, "current.html"), html, "utf8");
+  await renderHtmlToPng({ rootDir: config.publicDir });
   return { ok: true, slot: data.slot };
 }
 
@@ -164,6 +166,7 @@ async function mirrorSlotToCurrent(config, slotPath, slot) {
     await copyFile(bgPath, path.join(config.publicDir, "current-bg.jpg"));
   }
   await copyFile(dataPath, path.join(config.publicDir, "current.json"));
+  await renderHtmlToPng({ rootDir: config.publicDir });
 
   const archiveUrl = `/days/${path.basename(path.dirname(slotPath))}/${slot}/index.html`;
   return archiveUrl;
@@ -307,6 +310,7 @@ export async function showAlternateContent(input, options = {}) {
   await writeManifest(config, dateKey, manifest);
 
   await writeFile(path.join(config.publicDir, "current.html"), html, "utf8");
+  await renderHtmlToPng({ rootDir: config.publicDir });
 
   const revertAt = new Date(now.getTime() + durationMs).toISOString();
   const state = await writeDisplayState(config, {

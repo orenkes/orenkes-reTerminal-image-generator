@@ -175,6 +175,7 @@ async function runServer(mode) {
   const schedulerOptions =
     mode === "dev" ? { config, skipPreferredActivate: true } : { config };
   const initial = await schedulerTick(schedulerOptions);
+  await rebuildCurrentHtml({ config }).catch(() => {});
   console.log(JSON.stringify({ mode, boot: initial }, null, 2));
 
   const server = createServer((req, res) => {
@@ -252,7 +253,8 @@ async function runCli(command, args) {
 
   if (command === "build") {
     const tick = await schedulerTick({ config });
-    console.log(JSON.stringify({ command: "build", tick }, null, 2));
+    const rebuilt = await rebuildCurrentHtml({ config });
+    console.log(JSON.stringify({ command: "build", tick, rebuilt }, null, 2));
     return;
   }
 

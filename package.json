@@ -12,5 +12,8 @@
     "rebuild:current": "node scripts/prototype.mjs rebuild",
     "status": "node scripts/prototype.mjs status",
     "tick": "node scripts/prototype.mjs tick"
+  },
+  "dependencies": {
+    "playwright-core": "^1.60.0"
   }
 }

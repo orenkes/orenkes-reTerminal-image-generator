@@ -4,119 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Cache-Control" content="no-store" />
-    <title>reTerminal image generator</title>
+    <title>לוח מזג אוויר</title>
     <style>
+      html,
       body {
         margin: 0;
-        min-height: 100vh;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+
+      body {
         display: grid;
         place-items: center;
-        background: #ece8df;
-        font-family: "Rubik", "Segoe UI", sans-serif;
       }
-      main {
-        width: min(96vw, 980px);
-        padding: 24px;
+
+      img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
       }
-      .toolbar {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 10px;
-        align-items: center;
-        margin-bottom: 12px;
-        direction: ltr;
-      }
-      .toolbar input {
-        width: 100%;
-        border: 1px solid rgba(29, 35, 48, 0.16);
-        border-radius: 12px;
-        padding: 12px 14px;
-        font: inherit;
-        background: rgba(255, 255, 255, 0.86);
-      }
-      .toolbar button {
-        border: 0;
-        border-radius: 12px;
-        padding: 12px 16px;
-        font: 700 14px/1 "Rubik", "Segoe UI", sans-serif;
-        color: #fff;
-        background: #1d4f91;
-        cursor: pointer;
-      }
-      iframe {
-        width: 100%;
-        aspect-ratio: 800 / 480;
-        border: 0;
-        border-radius: 18px;
-        box-shadow: 0 24px 80px rgba(29, 35, 48, 0.14);
-        background: #fff;
-      }
-      .meta {
-        margin-top: 12px;
-        font-size: 14px;
-        color: #5e6577;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 16px;
-      }
-      code {
-        background: rgba(29, 35, 48, 0.08);
-        border-radius: 999px;
-        padding: 2px 8px;
-      }
-      .hint {
-        margin-top: 10px;
-        font-size: 13px;
-        color: #5e6577;
-      }
-      a { color: #1d4f91; }
     </style>
   </head>
   <body>
-    <main>
-      <div class="toolbar">
-        <input id="displayUrl" type="text" spellcheck="false" placeholder="הדבק כאן URL של ngrok או השאר ריק ל-/current.html" />
-        <button id="loadBtn" type="button">טען</button>
-      </div>
-      <iframe id="previewFrame" src="/current.html" title="תצוגה פעילה"></iframe>
-      <div class="meta">
-        <div>reTerminal: <code>/current.html</code></div>
-        <div><a href="/__status">סטטוס</a></div>
-        <div><a href="#" id="refresh">רענון מזג אוויר</a></div>
-      </div>
-      <div class="hint">אם ה-URL החיצוני חוסם iframe, הדפדפן יציג מסך ריק. במקרה כזה עדיף לפתוח את ה-URL ישירות בלשונית.</div>
-    </main>
-    <script>
-      const input = document.getElementById("displayUrl");
-      const frame = document.getElementById("previewFrame");
-      const params = new URLSearchParams(location.search);
-      const stored = localStorage.getItem("displayUrl") || "";
-      const initial = params.get("url") || stored || "/current.html";
-
-      function normalizeUrl(value) {
-        const trimmed = String(value || "").trim();
-        return trimmed || "/current.html";
-      }
-
-      function applyUrl(value) {
-        const next = normalizeUrl(value);
-        frame.src = next;
-        input.value = next;
-        localStorage.setItem("displayUrl", next);
-      }
-
-      applyUrl(initial);
-      document.getElementById("loadBtn").addEventListener("click", () => {
-        applyUrl(input.value);
-        const url = new URL(location.href);
-        url.searchParams.set("url", normalizeUrl(input.value));
-        history.replaceState({}, "", url);
-      });
-      document.getElementById("refresh").addEventListener("click", async (e) => {
-        e.preventDefault();
-        await fetch("/__refresh", { method: "POST" });
-        location.reload();
-      });
-    </script>
+    <img src="/current.png" alt="לוח מזג אוויר" />
   </body>
 </html>
