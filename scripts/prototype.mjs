@@ -13,6 +13,7 @@ import {
   schedulerTick,
   showAlternateContent
 } from "./daily.mjs";
+import { syncDocs } from "./sync-docs.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -215,6 +216,7 @@ async function runCli(command, args) {
 
   if (command === "rebuild") {
     const result = await rebuildCurrentHtml({ config });
+    await syncDocs(rootDir);
     console.log(JSON.stringify({ command, ...result }, null, 2));
     return;
   }
@@ -222,6 +224,7 @@ async function runCli(command, args) {
   if (command === "generate") {
     const slot = args[0] || preferredWeatherSlot(new Date(), config);
     const result = await generateWeatherSlot(slot, { config, activate: true });
+    await syncDocs(rootDir);
     console.log(JSON.stringify({ command, slot, ...result }, null, 2));
     return;
   }
@@ -229,6 +232,7 @@ async function runCli(command, args) {
   if (command === "activate") {
     const slot = args[0] || preferredWeatherSlot(new Date(), config);
     const result = await activateWeatherSlot(slot, { config });
+    await syncDocs(rootDir);
     console.log(JSON.stringify({ command, ...result }, null, 2));
     return;
   }
@@ -237,6 +241,7 @@ async function runCli(command, args) {
     const fileFlag = args.indexOf("--file");
     const file = fileFlag >= 0 ? path.resolve(rootDir, args[fileFlag + 1]) : null;
     const result = await showAlternateContent({ file, title: args[0] !== "--file" ? args[0] : "alternate" }, { config });
+    await syncDocs(rootDir);
     console.log(JSON.stringify({ command, ...result }, null, 2));
     return;
   }
@@ -247,13 +252,16 @@ async function runCli(command, args) {
   }
 
   if (command === "tick") {
-    console.log(JSON.stringify(await schedulerTick({ config }), null, 2));
+    const result = await schedulerTick({ config });
+    await syncDocs(rootDir);
+    console.log(JSON.stringify(result, null, 2));
     return;
   }
 
   if (command === "build") {
     const tick = await schedulerTick({ config });
     const rebuilt = await rebuildCurrentHtml({ config });
+    await syncDocs(rootDir);
     console.log(JSON.stringify({ command: "build", tick, rebuilt }, null, 2));
     return;
   }

@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/prototype.mjs build && node scripts/sync-docs.mjs",
+    "build": "node scripts/prototype.mjs build",
     "dev": "node scripts/prototype.mjs dev",
     "serve": "node scripts/prototype.mjs serve",
     "generate:morning": "node scripts/prototype.mjs generate morning",
