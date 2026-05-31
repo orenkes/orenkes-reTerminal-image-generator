@@ -38,6 +38,7 @@ const port = Number(process.env.PORT || 8081);
 
 const NO_CACHE_PATHS = new Set([
   "/current.html",
+  "/current.png",
   "/current.json",
   "/current.prompt.txt",
   "/current-bg.jpg",

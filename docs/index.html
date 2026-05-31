@@ -29,6 +29,10 @@
     </style>
   </head>
   <body>
-    <img src="/current.png" alt="לוח מזג אוויר" />
+    <img id="weather-image" alt="לוח מזג אוויר" />
+    <script>
+      const image = document.getElementById("weather-image");
+      image.src = `/current.png?v=${Date.now()}`;
+    </script>
   </body>
 </html>
