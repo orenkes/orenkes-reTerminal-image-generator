@@ -3,26 +3,32 @@
 export const WEATHER_THEMES = {
   clear: {
     mood: "clear sunny sky, warm golden light, open horizon",
+    visual: "bright clear summer sky, warm sunlight, crisp visibility, cheerful atmosphere",
     unsplashQuery: "watercolor sunrise landscape warm golden hour"
   },
   cloudy: {
     mood: "soft cloudy sky, diffused daylight, calm atmosphere",
+    visual: "bright cloudy sky, soft cloud cover, diffused daylight, calm and elegant atmosphere",
     unsplashQuery: "soft watercolor cloudy sky pastoral landscape"
   },
   fog: {
     mood: "misty fog, muted tones, gentle haze",
+    visual: "light mist in the air, soft atmospheric haze, muted distance, calm and dreamy feeling",
     unsplashQuery: "misty watercolor hills muted morning"
   },
   rain: {
     mood: "rainy weather, wet surfaces, cool blue-grey tones",
+    visual: "rainy atmosphere, dense clouds, soft rain haze, wet surfaces, moody but beautiful lighting",
     unsplashQuery: "watercolor rainy landscape soft blue grey"
   },
   storm: {
     mood: "dramatic storm clouds, deep contrast, brooding sky",
+    visual: "dramatic cloud layers, heavy sky energy, deep contrast, vivid but controlled atmosphere",
     unsplashQuery: "dramatic watercolor storm clouds landscape"
   },
   snow: {
     mood: "cold winter scene, soft snow, pale cool palette",
+    visual: "soft snowy atmosphere, frosted surfaces, pale light, quiet winter calm",
     unsplashQuery: "watercolor winter landscape soft snow"
   }
 };
@@ -31,27 +37,27 @@ export const BACKGROUND_STYLES = {
   botanical: {
     label: "צמחי",
     artDirection:
-      "lush botanical scene, plants leaves and organic textures, nature-focused composition"
+      "lush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere"
   },
   urban: {
     label: "עירוני",
     artDirection:
-      "urban cityscape, architecture rooftops streets, metropolitan atmosphere"
+      "modern urban scenic illustration, clean metropolitan atmosphere, elegant city-park environment, polished contemporary look"
   },
   anime: {
     label: "אנימה",
     artDirection:
-      "anime illustration background, soft cel shading, painterly sky, studio-inspired landscape"
+      "anime-inspired scenic illustration, refined soft cel shading, painterly sky, luminous atmosphere, clean linework, modern Japanese-inspired background art"
   },
   illustrated: {
     label: "מצוייר",
     artDirection:
-      "hand-painted watercolor illustration, artistic brush strokes, paper texture feel"
+      "painterly scenic illustration, soft brushstroke texture, artistic clouds, elegant hand-painted look, calm and refined atmosphere"
   },
   graphic: {
     label: "גרפי",
     artDirection:
-      "minimal graphic design background, flat shapes, bold color blocks, clean poster aesthetic"
+      "minimal scenic illustration, clean shapes, restrained detail, soft modern atmosphere, elegant and uncluttered"
   }
 };
 
@@ -82,6 +88,35 @@ export function temperatureFeel(weather) {
   if (high >= 20) return "mild comfortable temperatures";
   if (high >= 14) return "cool crisp air, soft cool tones";
   return "cold chilly atmosphere, cool blue undertones";
+}
+
+export function weatherConditionHe(weather) {
+  return weather?.today?.summary || weather?.current?.summary || "מעונן";
+}
+
+export function weatherVisualDescription(weather) {
+  const theme = pickThemeFromWeather(weather);
+  return WEATHER_THEMES[theme]?.visual || WEATHER_THEMES.cloudy.visual;
+}
+
+export function lightingDescription(slot) {
+  return slot === "evening"
+    ? "soft evening light, calm sunset atmosphere, warm golden-orange glow, long shadows, relaxed and serene mood"
+    : "soft morning light, fresh start-of-day atmosphere, subtle golden sunlight filtering through the sky, gentle brightness, calm and pleasant glow";
+}
+
+export function colorPaletteForWeather(weather, slot) {
+  const theme = pickThemeFromWeather(weather);
+  if (slot === "evening") {
+    return "warm peach, soft gold, sunset orange, dusty blue, Mediterranean greens";
+  }
+  if (theme === "rain" || theme === "storm" || theme === "fog") {
+    return "cool grays, deep blue-gray sky tones, wet green vegetation, subtle muted highlights";
+  }
+  if (theme === "cloudy") {
+    return "muted sky blues, soft grays, fresh greens, gentle neutral tones, balanced and elegant";
+  }
+  return "soft sky blues, warm sunlight whites, Mediterranean greens, gentle warm-neutral tones";
 }
 
 export const STYLE_KEYS = Object.keys(BACKGROUND_STYLES);
@@ -126,30 +161,61 @@ export function buildOpenAiBackgroundPrompt({
   slot = "morning",
   dateKey
 }) {
-  const theme = pickThemeFromWeather(weather);
-  const themeMeta = WEATHER_THEMES[theme];
   const style = styleKey || pickStyleForDate(dateKey);
   const styleMeta = BACKGROUND_STYLES[style];
-  const summary = weather?.today?.summary || weather?.current?.summary || "";
+  const place = locationName || "Holon, Israel";
   const tempFeel = temperatureFeel(weather);
-  const place = locationName || "Israel coastal city";
-  const daypart = slotDaypartAppearance(slot);
-  const slotLabel = slot === "evening" ? "evening" : "morning";
+  const weatherCondition = weatherConditionHe(weather);
+  const weatherVisual = weatherVisualDescription(weather);
+  const lighting = lightingDescription(slot);
+  const palette = colorPaletteForWeather(weather, slot);
+  const ahead = (weather?.ahead || [])
+    .map(day => `${day.dayLabel} ${day.high}/${day.low}`)
+    .join(", ");
 
   return [
-    "Create ONE full-bleed 800x480 landscape background image for a weather screen.",
-    "Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels.",
-    `Art style for this calendar day (same style for morning and evening): ${styleMeta.artDirection}.`,
-    `Time of day for this image: ${slotLabel}. Lighting: ${daypart.lighting}.`,
-    `Weather in the artwork must match: ${themeMeta.mood}.`,
-    `Temperature feel in the scene: ${tempFeel}.`,
-    summary ? `Conditions: ${summary}.` : "",
-    `Place: ${place}, Mediterranean coast.`,
-    "Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets.",
-    "Single cohesive image, no collage."
-  ]
-    .filter(Boolean)
-    .join(" ");
+    "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.",
+    "",
+    "Style:",
+    styleMeta.artDirection,
+    "",
+    "Overall look:",
+    "premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.",
+    "",
+    "Scene:",
+    `a serene urban park scene in ${place}, with Mediterranean vegetation, palm trees, soft greenery, walking paths, a reflective pond or small lake, and a distant skyline of light-colored apartment buildings and city structures.`,
+    "The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.",
+    "",
+    "Time of day:",
+    slot === "evening" ? "evening" : "morning",
+    "",
+    "Lighting:",
+    lighting,
+    "",
+    "Weather:",
+    `The weather shown in the artwork must match: ${weatherCondition}.`,
+    `Visual atmosphere: ${weatherVisual}.`,
+    "",
+    "Temperature feel:",
+    tempFeel,
+    "",
+    "Composition:",
+    "wide cinematic composition with clear depth, including foreground, midground, and background.",
+    "Keep the image cohesive and natural, not like a collage.",
+    "Place most of the scenic detail on the left and center-left areas.",
+    "Leave the upper-right area visually calm and relatively low-detail for future text overlay.",
+    "Leave a broad lower area visually calm enough for future forecast cards.",
+    "",
+    "Color palette:",
+    palette,
+    "",
+    "Important:",
+    "do not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.",
+    "No flat empty bands.",
+    "No collage.",
+    "No split layout.",
+    "Single cohesive image only."
+  ].join("\n");
 }
 
 export function unsplashQueryForWeather(weather, overrideQuery) {

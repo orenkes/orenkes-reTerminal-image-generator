@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-31T03:31:18.775Z",
+  "generatedAt": "2026-05-31T15:49:35.645Z",
   "date": "2026-05-31",
-  "slot": "morning",
+  "slot": "evening",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
@@ -17,21 +17,21 @@
       "periods": [
         {
           "name": "בוקר",
-          "label": "מעונן חלקית",
-          "icon": "partly",
+          "label": "בהיר ברובו",
+          "icon": "sun",
           "temp": 22
         },
         {
           "name": "צהריים",
           "label": "שמיים בהירים",
           "icon": "sun",
-          "temp": 26
+          "temp": 25
         },
         {
           "name": "ערב",
-          "label": "שמיים בהירים",
+          "label": "בהיר ברובו",
           "icon": "sun",
-          "temp": 23
+          "temp": 22
         }
       ]
     },
@@ -41,7 +41,7 @@
         "high": 25,
         "low": 19,
         "icon": "partly",
-        "label": "מעונן חלקית"
+        "label": "מעונן"
       },
       {
         "dayLabel": "יום שלישי",
@@ -71,14 +71,14 @@
   "background": {
     "source": "openai",
     "provider": "openai",
-    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-05-31/morning/bg.jpg",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-05-31/evening/bg.jpg",
     "imageUrl": "bg.jpg",
     "model": "gpt-image-1-mini",
     "style": "anime",
-    "slot": "morning",
+    "slot": "evening",
     "dateKey": "2026-05-31",
     "theme": "cloudy",
-    "prompt": "Create ONE full-bleed 800x480 landscape background image for a weather screen. Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels. Art style for this calendar day (same style for morning and evening): anime illustration background, soft cel shading, painterly sky, studio-inspired landscape. Time of day for this image: morning. Lighting: morning atmosphere: fresh sunrise light, soft cool-warm glow, clear start-of-day sky, gentle brightness. Weather in the artwork must match: soft cloudy sky, diffused daylight, calm atmosphere. Temperature feel in the scene: warm pleasant summer day. Conditions: מעונן. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nanime-inspired scenic illustration, refined soft cel shading, painterly sky, luminous atmosphere, clean linework, modern Japanese-inspired background art\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na serene urban park scene in חולון, with Mediterranean vegetation, palm trees, soft greenery, walking paths, a reflective pond or small lake, and a distant skyline of light-colored apartment buildings and city structures.\nThe scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.\n\nTime of day:\nevening\n\nLighting:\nsoft evening light, calm sunset atmosphere, warm golden-orange glow, long shadows, relaxed and serene mood\n\nWeather:\nThe weather shown in the artwork must match: מעונן.\nVisual atmosphere: bright cloudy sky, soft cloud cover, diffused daylight, calm and elegant atmosphere.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nPlace most of the scenic detail on the left and center-left areas.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower area visually calm enough for future forecast cards.\n\nColor palette:\nwarm peach, soft gold, sunset orange, dusty blue, Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
     "size": "1536x1024",
     "quality": "low"
   },
