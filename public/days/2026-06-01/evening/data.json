@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T15:00:27.604Z",
+  "generatedAt": "2026-06-01T16:46:07.328Z",
   "date": "2026-06-01",
   "slot": "evening",
   "locationName": "חולון",
@@ -17,8 +17,8 @@
       "periods": [
         {
           "name": "בוקר",
-          "label": "שמיים בהירים",
-          "icon": "sun",
+          "label": "ערפל",
+          "icon": "partly",
           "temp": 23
         },
         {
@@ -53,9 +53,9 @@
       {
         "dayLabel": "יום חמישי",
         "high": 30,
-        "low": 20,
+        "low": 21,
         "icon": "partly",
-        "label": "מעונן"
+        "label": "מעונן חלקית"
       }
     ],
     "hero": {
@@ -78,9 +78,9 @@
     "slot": "evening",
     "dateKey": "2026-06-01",
     "theme": "cloudy",
-    "prompt": "Create ONE full-bleed 800x480 landscape background image for a weather screen. Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels. Art style for this calendar day (same style for morning and evening): lush botanical scene, plants leaves and organic textures, nature-focused composition. Time of day for this image: evening. Lighting: evening atmosphere: golden hour or dusk, warm low light, long soft shadows, sky with sunset oranges and purples, end-of-day calm. Weather in the artwork must match: soft cloudy sky, diffused daylight, calm atmosphere. Temperature feel in the scene: mild comfortable temperatures. Conditions: מעונן. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nlush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na serene urban park scene in חולון, with Mediterranean vegetation, palm trees, soft greenery, walking paths, a reflective pond or small lake, and a distant skyline of light-colored apartment buildings and city structures.\nThe scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.\n\nTime of day:\nevening\n\nLighting:\nsoft evening light, calm sunset atmosphere, warm golden-orange glow, long shadows, relaxed and serene mood\n\nWeather:\nThe weather shown in the artwork must match: מעונן.\nVisual atmosphere: bright cloudy sky, soft cloud cover, diffused daylight, calm and elegant atmosphere.\n\nTemperature feel:\nmild comfortable temperatures\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nPlace most of the scenic detail on the left and center-left areas.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower area visually calm enough for future forecast cards.\n\nColor palette:\nwarm peach, soft gold, sunset orange, dusty blue, Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
     "size": "1536x1024",
     "quality": "low"
   },
-  "prompt": "Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: מעונן. Ahead: יום שלישי 26/19, יום רביעי 28/18, יום חמישי 30/20. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
+  "prompt": "Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: מעונן. Ahead: יום שלישי 26/19, יום רביעי 28/18, יום חמישי 30/21. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
 }
