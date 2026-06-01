@@ -1,1 +1,0 @@
-Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: מעונן. Ahead: יום שני 25/19, יום שלישי 26/19, יום רביעי 27/17. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel.
