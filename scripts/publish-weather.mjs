@@ -42,7 +42,7 @@ async function main() {
   const date = current?.date || new Date().toISOString().slice(0, 10);
   const commitMessage = `chore: publish ${slot} weather for ${date}`;
 
-  run("git", ["add", "-A", "public", "docs"]);
+  run("git", ["add", "-A", "public", "docs", "history"]);
 
   const cached = spawnSync("git", ["diff", "--cached", "--quiet"], { stdio: "ignore" });
   if (cached.status === 0) {
