@@ -13,15 +13,20 @@ export function getBackgroundProvider() {
 export async function fetchBackground(args) {
   const provider = getBackgroundProvider();
 
-  if (provider === "gradient") {
+  async function gradientFallback(reason, sourceProvider) {
     const { pickThemeFromWeather } = await import("./background-theme.mjs");
     return {
       source: "gradient-fallback",
-      provider: "gradient",
+      provider: sourceProvider,
       localPath: null,
       imageUrl: null,
-      theme: pickThemeFromWeather(args.weather)
+      theme: pickThemeFromWeather(args.weather),
+      reason
     };
+  }
+
+  if (provider === "gradient") {
+    return gradientFallback("gradient provider selected", "gradient");
   }
 
   if (provider === "openai") {
@@ -38,20 +43,21 @@ export async function fetchBackground(args) {
 
     const fallback = process.env.BACKGROUND_FALLBACK || "unsplash";
     if (fallback === "unsplash" && process.env.UNSPLASH_ACCESS_KEY) {
-      console.warn("Falling back to Unsplash");
-      return fetchUnsplashBackground(args);
+      try {
+        console.warn("Falling back to Unsplash");
+        return await fetchUnsplashBackground(args);
+      } catch (error) {
+        console.warn("Unsplash fallback failed, using gradient:", error?.message || error);
+      }
     }
 
-    const { pickThemeFromWeather } = await import("./background-theme.mjs");
-    return {
-      source: "gradient-fallback",
-      provider: "openai",
-      localPath: null,
-      imageUrl: null,
-      theme: pickThemeFromWeather(args.weather),
-      reason: "openai failed or skipped"
-    };
+    return gradientFallback("openai failed or skipped", "openai");
   }
 
-  return fetchUnsplashBackground(args);
+  try {
+    return await fetchUnsplashBackground(args);
+  } catch (error) {
+    console.warn("Unsplash background failed, using gradient:", error?.message || error);
+    return gradientFallback("unsplash failed", "unsplash");
+  }
 }
