@@ -66,7 +66,6 @@ async function serveStatic(req, res) {
   const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
   let pathname = url.pathname;
   if (pathname === "/") pathname = "/index.html";
-  if (pathname === "/current.svg") pathname = "/current.html";
 
   const filePath = path.join(publicDir, pathname);
   if (!filePath.startsWith(publicDir)) {

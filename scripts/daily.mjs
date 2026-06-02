@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import {
   copyFile,
+  cp,
   mkdir,
   readdir,
   readFile,
@@ -26,7 +27,8 @@ export function getConfig() {
     eveningHour: Number(process.env.EVENING_HOUR || 18),
     alternateMinutes: Number(process.env.ALTERNATE_DURATION_MINUTES || 60),
     publicDir: process.env.PUBLIC_DIR || path.join(process.cwd(), "public"),
-    daysDirName: "days"
+    daysDirName: "days",
+    historyDirName: process.env.HISTORY_DIR || path.join(process.cwd(), "history")
   };
 }
 
@@ -70,6 +72,14 @@ function displayStatePath(config) {
 
 function manifestPath(config, dateKey) {
   return path.join(dayDir(config, dateKey), "manifest.json");
+}
+
+function historyDayDir(config, dateKey) {
+  return path.join(config.historyDirName, config.daysDirName, dateKey);
+}
+
+function historySlotDir(config, dateKey, slot) {
+  return path.join(historyDayDir(config, dateKey), slot);
 }
 
 async function readJson(filePath, fallback = null) {
@@ -116,6 +126,16 @@ export async function writeManifest(config, dateKey, manifest) {
   await writeJson(manifestPath(config, dateKey), manifest);
 }
 
+async function archiveSlotHistory(config, dateKey, slot, slotPath) {
+  const targetDir = historySlotDir(config, dateKey, slot);
+  await mkdir(targetDir, { recursive: true });
+  await cp(slotPath, targetDir, { recursive: true, force: true });
+  const currentPng = path.join(config.publicDir, "current.png");
+  if (existsSync(currentPng)) {
+    await copyFile(currentPng, path.join(targetDir, "current.png"));
+  }
+}
+
 export async function cleanupOldDays(config, keepDateKey) {
   const daysRoot = path.join(config.publicDir, config.daysDirName);
   if (!existsSync(daysRoot)) return [];
@@ -124,6 +144,9 @@ export async function cleanupOldDays(config, keepDateKey) {
     if (!entry.isDirectory()) continue;
     if (entry.name === keepDateKey) continue;
     const target = path.join(daysRoot, entry.name);
+    const archiveTarget = historyDayDir(config, entry.name);
+    await mkdir(path.dirname(archiveTarget), { recursive: true });
+    await cp(target, archiveTarget, { recursive: true, force: true });
     await rm(target, { recursive: true, force: true });
     removed.push(entry.name);
   }
@@ -138,6 +161,12 @@ export async function rebuildCurrentHtml(options = {}) {
   const html = htmlForCurrentDisplay(data);
   await writeFile(path.join(config.publicDir, "current.html"), html, "utf8");
   await renderHtmlToPng({ rootDir: config.publicDir });
+  if (data?.date && data?.slot) {
+    const slotPath = path.join(config.publicDir, config.daysDirName, data.date, data.slot);
+    if (existsSync(slotPath)) {
+      await archiveSlotHistory(config, data.date, data.slot, slotPath);
+    }
+  }
   return { ok: true, slot: data.slot };
 }
 
@@ -167,6 +196,7 @@ async function mirrorSlotToCurrent(config, slotPath, slot) {
   }
   await copyFile(dataPath, path.join(config.publicDir, "current.json"));
   await renderHtmlToPng({ rootDir: config.publicDir });
+  await archiveSlotHistory(config, data.date, slot, slotPath);
 
   const archiveUrl = `/days/${path.basename(path.dirname(slotPath))}/${slot}/index.html`;
   return archiveUrl;

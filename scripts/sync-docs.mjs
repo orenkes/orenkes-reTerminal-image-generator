@@ -9,6 +9,7 @@ export async function syncDocs(rootDir = path.resolve(process.cwd())) {
   await rm(docsDir, { recursive: true, force: true });
   await mkdir(docsDir, { recursive: true });
   await cp(publicDir, docsDir, { recursive: true, force: true });
+  await rm(path.join(docsDir, "current.svg"), { force: true });
   await writeFile(path.join(docsDir, ".gitkeep"), "", "utf8");
 
   console.log(`Synced ${publicDir} -> ${docsDir}`);
