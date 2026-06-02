@@ -1,7 +1,7 @@
 Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.
 
 Style:
-lush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere
+modern urban scenic illustration, clean metropolitan atmosphere, elegant city-park environment, polished contemporary look
 
 Overall look:
 premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.
@@ -21,7 +21,7 @@ The weather shown in the artwork must match: מעונן.
 Visual atmosphere: bright cloudy sky, soft cloud cover, diffused daylight, calm and elegant atmosphere.
 
 Temperature feel:
-mild comfortable temperatures
+warm pleasant summer day
 
 Composition:
 wide cinematic composition with clear depth, including foreground, midground, and background.
