@@ -1,6 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
@@ -45,6 +47,12 @@ function gitSha(args) {
   return run("git", ["rev-parse", ...args]).trim();
 }
 
+export function existingPublishPaths(cwd = process.cwd()) {
+  return ["public", "docs", "history", "state"].filter(entry =>
+    existsSync(path.join(cwd, entry))
+  );
+}
+
 async function runGenerateWithRetry(slot) {
   let lastError = null;
 
@@ -77,7 +85,7 @@ async function main() {
     const date = current?.date || new Date().toISOString().slice(0, 10);
     const commitMessage = `chore: publish ${slot} weather for ${date}`;
 
-    run("git", ["add", "-A", "public", "docs", "history", "state"]);
+    run("git", ["add", "-A", ...existingPublishPaths()]);
 
     const cached = spawnSync("git", ["diff", "--cached", "--quiet"], { stdio: "ignore" });
     if (cached.status === 0) {
@@ -151,7 +159,12 @@ async function main() {
   }
 }
 
-main().catch(error => {
-  console.error(error?.message || String(error));
-  process.exit(1);
-});
+const isMainModule =
+  process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+
+if (isMainModule) {
+  main().catch(error => {
+    console.error(error?.message || String(error));
+    process.exit(1);
+  });
+}
