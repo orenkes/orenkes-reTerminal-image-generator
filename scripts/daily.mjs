@@ -13,7 +13,7 @@ import { fetchBackground, getBackgroundProvider } from "./background.mjs";
 import { BACKGROUND_STYLES, pickStyleForDate } from "./background-theme.mjs";
 import { renderHtmlToPng } from "./html-to-png.mjs";
 import { fetchWeather } from "./weather.mjs";
-import { buildHtml, buildPrompt } from "./render.mjs";
+import { buildHtml } from "./render.mjs";
 
 export const SLOTS = ["morning", "evening"];
 
@@ -164,6 +164,7 @@ export async function rebuildCurrentHtml(options = {}) {
   if (data?.date && data?.slot) {
     const slotPath = path.join(config.publicDir, config.daysDirName, data.date, data.slot);
     if (existsSync(slotPath)) {
+      await rm(path.join(slotPath, "prompt.txt"), { force: true });
       await archiveSlotHistory(config, data.date, data.slot, slotPath);
     }
   }
@@ -195,6 +196,7 @@ async function mirrorSlotToCurrent(config, slotPath, slot) {
     await copyFile(bgPath, path.join(config.publicDir, "current-bg.jpg"));
   }
   await copyFile(dataPath, path.join(config.publicDir, "current.json"));
+  await rm(path.join(slotPath, "prompt.txt"), { force: true });
   await renderHtmlToPng({ rootDir: config.publicDir });
   await archiveSlotHistory(config, data.date, slot, slotPath);
 
@@ -229,7 +231,6 @@ export async function generateWeatherSlot(slot, options = {}) {
     dateKey
   });
 
-  const prompt = buildPrompt({ weather, background });
   const html = buildHtml({
     weather,
     background: { ...background, imageUrl: "bg.jpg" },
@@ -246,13 +247,12 @@ export async function generateWeatherSlot(slot, options = {}) {
     lon: config.lon,
     timeZone: config.timeZone,
     weather,
-    background,
-    prompt
+    background
   };
 
   await writeFile(path.join(outDir, "index.html"), html, "utf8");
   await writeFile(path.join(outDir, "data.json"), JSON.stringify(payload, null, 2) + "\n", "utf8");
-  await writeFile(path.join(outDir, "prompt.txt"), prompt + "\n", "utf8");
+  await rm(path.join(outDir, "prompt.txt"), { force: true });
 
   const manifest = await readManifest(config, dateKey);
   manifest.slots[slot] = {

@@ -56,4 +56,5 @@ assert.match(prompt, /Color palette:/);
 assert.match(prompt, /right side is reserved for Hebrew text overlay/i);
 assert.match(prompt, /upper-right area visually calm and relatively low-detail/i);
 assert.match(prompt, /bottom 25% to 35% of the image/i);
+assert.match(prompt, /few small birds in the sky or tiny distant human silhouettes/i);
 assert.match(prompt, /do not draw any text, letters, numbers, icons, logos/i);
