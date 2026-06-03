@@ -11,6 +11,7 @@
     "generate:openai-bg": "BACKGROUND_PROVIDER=openai node scripts/prototype.mjs generate morning",
     "publish:morning": "node scripts/publish-weather.mjs morning",
     "publish:evening": "node scripts/publish-weather.mjs evening",
+    "probe:push": "node scripts/push-probe.mjs",
     "rebuild:current": "node scripts/prototype.mjs rebuild",
     "status": "node scripts/prototype.mjs status",
     "tick": "node scripts/prototype.mjs tick"
