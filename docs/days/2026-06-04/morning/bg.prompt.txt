@@ -1,24 +1,24 @@
 Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.
 
 Style:
-anime-inspired scenic illustration, refined soft cel shading, painterly sky, luminous atmosphere, clean linework, polished modern Japanese-inspired background art
+refined painterly illustration, soft brushstroke texture, artistic clouds, atmospheric depth, calm and premium look
 
 Overall look:
 premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.
 
 Scene:
-a serene urban park scene inspired by central Israel, with walking paths, palm trees, light greenery, a few distant apartment buildings, and a calm open sky.
+a stylized atmospheric weather scene focused on sky, light, clouds, soft depth, and elegant seasonal mood, with only a subtle distant horizon or faint silhouettes if needed.
 Use חולון as the location mood when it helps the scene feel specific and believable.
 The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.
 
 Time of day:
-evening
+morning
 
 Lighting:
-calm evening atmosphere, warm golden-hour light, soft sunset glow, relaxed and elegant mood
+fresh morning atmosphere, soft cool-warm light, gentle brightness, subtle sunrise glow
 
 Weather:
-The weather shown in the artwork must match: מעונן.
+The weather shown in the artwork must match: מעונן חלקית.
 Visual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.
 
 Temperature feel:
@@ -38,7 +38,7 @@ Add only subtle secondary details in the lower area, such as soft ground texture
 Add a subtle sense of life with a few small birds in the sky or tiny distant human silhouettes, but keep them secondary and unobtrusive.
 
 Color palette:
-warm peach, soft gold, sunset orange, dusty blue, Mediterranean greens
+muted sky blues, soft grays, warm whites, fresh Mediterranean greens
 
 Important:
 do not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.
