@@ -172,11 +172,17 @@ async function runServer(mode) {
   await mkdir(publicDir, { recursive: true });
   await mkdir(path.join(publicDir, "days"), { recursive: true });
 
+  const schedulerEnabled = process.env.SCHEDULER_ENABLED === "1";
   const schedulerOptions =
     mode === "dev" ? { config, skipPreferredActivate: true } : { config };
-  const initial = await schedulerTick(schedulerOptions);
-  await rebuildCurrentHtml({ config }).catch(() => {});
-  console.log(JSON.stringify({ mode, boot: initial }, null, 2));
+  let initial = null;
+
+  if (schedulerEnabled) {
+    initial = await schedulerTick(schedulerOptions);
+    await rebuildCurrentHtml({ config }).catch(() => {});
+  }
+
+  console.log(JSON.stringify({ mode, schedulerEnabled, boot: initial }, null, 2));
 
   const server = createServer((req, res) => {
     const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
@@ -198,7 +204,7 @@ async function runServer(mode) {
     console.log(`Status: http://127.0.0.1:${port}/__status`);
   });
 
-  if (mode === "dev" || mode === "serve") {
+  if (schedulerEnabled && (mode === "dev" || mode === "serve")) {
     const intervalMs = Number(process.env.SCHEDULER_INTERVAL_MS || 60_000);
     setInterval(() => {
       schedulerTick(schedulerOptions).catch(error => {

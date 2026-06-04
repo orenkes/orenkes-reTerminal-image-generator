@@ -14,7 +14,7 @@ try {
   assert.deepEqual(existingPublishPaths(tempRoot), ["public", "docs", "history"]);
 
   await mkdir(path.join(tempRoot, "state"), { recursive: true });
-  assert.deepEqual(existingPublishPaths(tempRoot), ["public", "docs", "history", "state"]);
+  assert.deepEqual(existingPublishPaths(tempRoot), ["public", "docs", "history"]);
 } finally {
   await rm(tempRoot, { recursive: true, force: true });
 }
