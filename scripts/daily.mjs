@@ -3,6 +3,7 @@ import {
   copyFile,
   cp,
   mkdir,
+  rename,
   readdir,
   readFile,
   rm,
@@ -183,6 +184,7 @@ function htmlForCurrentDisplay(data) {
 async function mirrorSlotToCurrent(config, slotPath, slot) {
   const bgPath = path.join(slotPath, "bg.jpg");
   const dataPath = path.join(slotPath, "data.json");
+  const stageDir = path.join(config.publicDir, ".__stage-current");
 
   if (!existsSync(dataPath)) {
     throw new Error(`missing data.json in ${slotPath}`);
@@ -191,13 +193,26 @@ async function mirrorSlotToCurrent(config, slotPath, slot) {
   const data = JSON.parse(await readFile(dataPath, "utf8"));
   const html = htmlForCurrentDisplay(data);
 
-  await writeFile(path.join(config.publicDir, "current.html"), html, "utf8");
-  if (existsSync(bgPath)) {
-    await copyFile(bgPath, path.join(config.publicDir, "current-bg.jpg"));
+  await rm(stageDir, { recursive: true, force: true });
+  await mkdir(stageDir, { recursive: true });
+  try {
+    await writeFile(path.join(stageDir, "current.html"), html, "utf8");
+    if (existsSync(bgPath)) {
+      await copyFile(bgPath, path.join(stageDir, "current-bg.jpg"));
+    }
+    await copyFile(dataPath, path.join(stageDir, "current.json"));
+    await renderHtmlToPng({ rootDir: stageDir });
+
+    await rename(path.join(stageDir, "current.html"), path.join(config.publicDir, "current.html"));
+    await rename(path.join(stageDir, "current.json"), path.join(config.publicDir, "current.json"));
+    if (existsSync(path.join(stageDir, "current-bg.jpg"))) {
+      await rename(path.join(stageDir, "current-bg.jpg"), path.join(config.publicDir, "current-bg.jpg"));
+    }
+    await rename(path.join(stageDir, "current.png"), path.join(config.publicDir, "current.png"));
+  } finally {
+    await rm(stageDir, { recursive: true, force: true });
   }
-  await copyFile(dataPath, path.join(config.publicDir, "current.json"));
   await rm(path.join(slotPath, "prompt.txt"), { force: true });
-  await renderHtmlToPng({ rootDir: config.publicDir });
   await archiveSlotHistory(config, data.date, slot, slotPath);
 
   const archiveUrl = `/days/${path.basename(path.dirname(slotPath))}/${slot}/index.html`;

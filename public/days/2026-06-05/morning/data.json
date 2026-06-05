@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04T15:47:25.998Z",
-  "date": "2026-06-04",
-  "slot": "evening",
+  "generatedAt": "2026-06-05T01:00:47.747Z",
+  "date": "2026-06-05",
+  "slot": "morning",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
@@ -9,7 +9,7 @@
   "weather": {
     "source": "fallback",
     "locationLine": "חולון, ישראל",
-    "dateLine": "יום חמישי, 4 ביוני 2026",
+    "dateLine": "יום שישי, 5 ביוני 2026",
     "today": {
       "summary": "בהיר עד מעונן חלקית",
       "tempRange": "19-27",
@@ -37,21 +37,21 @@
     },
     "ahead": [
       {
-        "dayLabel": "יום שישי",
+        "dayLabel": "יום שבת",
         "high": 27,
         "low": 19,
         "icon": "sun",
         "label": "בהיר"
       },
       {
-        "dayLabel": "יום שבת",
+        "dayLabel": "יום ראשון",
         "high": 26,
         "low": 18,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
       {
-        "dayLabel": "יום ראשון",
+        "dayLabel": "יום שני",
         "high": 25,
         "low": 17,
         "icon": "sun",
