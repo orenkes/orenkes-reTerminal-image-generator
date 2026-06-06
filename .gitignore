@@ -9,3 +9,4 @@ public/.test-file.*
 public/__test.*
 docs/.test-file.*
 docs/__test.*
+docker-compose.yml

@@ -31,6 +31,30 @@ async function sleep(ms) {
   await new Promise(resolve => setTimeout(resolve, ms));
 }
 
+export function publishPathsForState(pending, cwd = process.cwd()) {
+  if (!pending?.date || !pending?.slot) {
+    return existingPublishPaths(cwd);
+  }
+
+  return [
+    "public/current.html",
+    "public/current.json",
+    "public/current.png",
+    "public/current-bg.jpg",
+    "public/current.prompt.txt",
+    "public/display-state.json",
+    `public/days/${pending.date}`,
+    "docs/current.html",
+    "docs/current.json",
+    "docs/current.png",
+    "docs/current-bg.jpg",
+    "docs/current.prompt.txt",
+    "docs/display-state.json",
+    `docs/days/${pending.date}`,
+    `history/days/${pending.date}/${pending.slot}`
+  ].filter(entry => existsSync(path.join(cwd, entry)));
+}
+
 function gitSha(args) {
   return run("git", ["rev-parse", ...args]).trim();
 }
@@ -70,7 +94,7 @@ async function main() {
       publishStartedAt: startedAt
     });
 
-    run("git", ["add", "-A", ...existingPublishPaths()]);
+    run("git", ["add", "-A", ...publishPathsForState(pending)]);
 
     const cached = spawnSync("git", ["diff", "--cached", "--quiet"], { stdio: "ignore" });
     if (cached.status === 0) {

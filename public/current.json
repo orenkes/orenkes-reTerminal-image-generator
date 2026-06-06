@@ -1,79 +1,86 @@
 {
-  "generatedAt": "2026-06-04T15:47:25.998Z",
-  "date": "2026-06-04",
+  "generatedAt": "2026-06-05T15:00:39.572Z",
+  "date": "2026-06-05",
   "slot": "evening",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
   "timeZone": "Asia/Jerusalem",
   "weather": {
-    "source": "fallback",
+    "source": "open-meteo",
     "locationLine": "חולון, ישראל",
-    "dateLine": "יום חמישי, 4 ביוני 2026",
+    "dateLine": "יום שישי, 5 ביוני 2026",
     "today": {
-      "summary": "בהיר עד מעונן חלקית",
+      "summary": "שמיים בהירים",
       "tempRange": "19-27",
-      "humidity": 65,
+      "humidity": 60,
       "periods": [
         {
           "name": "בוקר",
-          "label": "בהיר",
-          "icon": "sun",
-          "temp": 21
+          "label": "מעונן חלקית",
+          "icon": "partly",
+          "temp": 23
         },
         {
           "name": "צהריים",
-          "label": "מעונן חלקית",
-          "icon": "partly",
+          "label": "בהיר ברובו",
+          "icon": "sun",
           "temp": 27
         },
         {
           "name": "ערב",
-          "label": "נוח",
-          "icon": "partly",
-          "temp": 23
+          "label": "בהיר ברובו",
+          "icon": "sun",
+          "temp": 24
         }
       ]
     },
     "ahead": [
       {
-        "dayLabel": "יום שישי",
-        "high": 27,
-        "low": 19,
+        "dayLabel": "יום שבת",
+        "high": 29,
+        "low": 18,
         "icon": "sun",
-        "label": "בהיר"
+        "label": "בהיר ברובו"
       },
       {
-        "dayLabel": "יום שבת",
-        "high": 26,
-        "low": 18,
+        "dayLabel": "יום ראשון",
+        "high": 27,
+        "low": 21,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
       {
-        "dayLabel": "יום ראשון",
-        "high": 25,
-        "low": 17,
-        "icon": "sun",
-        "label": "בהיר"
+        "dayLabel": "יום שני",
+        "high": 27,
+        "low": 19,
+        "icon": "partly",
+        "label": "מעונן חלקית"
       }
     ],
     "hero": {
-      "icon": "partly",
-      "summary": "בהיר ונוח",
+      "icon": "sun",
+      "summary": "שמיים בהירים",
       "tempHigh": 27,
-      "sunrise": "05:42",
-      "sunset": "19:28",
-      "wind": "רוח קלה · 10 קמ״ש",
-      "trend": "מחר חם יותר (+1°)"
+      "sunrise": "05:34",
+      "sunset": "19:44",
+      "wind": "רוח מתונה · 17 קמ״ש",
+      "trend": "מחר חם יותר (+2°)"
     }
   },
   "background": {
-    "source": "gradient-fallback",
+    "source": "openai",
     "provider": "openai",
-    "localPath": null,
-    "imageUrl": null,
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-05/evening/bg.jpg",
+    "imageUrl": "bg.jpg",
+    "model": "gpt-image-1-mini",
+    "style": "graphic",
+    "slot": "evening",
+    "dateKey": "2026-06-05",
     "theme": "clear",
-    "reason": "openai failed or skipped"
-  }
+    "prompt": "Create ONE full-bleed 800x480 landscape background image for a weather screen. Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels. Art style for this calendar day (same style for morning and evening): minimal graphic design background, flat shapes, bold color blocks, clean poster aesthetic. Time of day for this image: evening. Lighting: evening atmosphere: golden hour or dusk, warm low light, long soft shadows, sky with sunset oranges and purples, end-of-day calm. Weather in the artwork must match: clear sunny sky, warm golden light, open horizon. Temperature feel in the scene: warm pleasant summer day. Conditions: שמיים בהירים. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "size": "1536x1024",
+    "quality": "low"
+  },
+  "prompt": "Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: שמיים בהירים. Ahead: יום שבת 29/18, יום ראשון 27/21, יום שני 27/19. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
 }
