@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T15:00:39.572Z",
-  "date": "2026-06-05",
+  "generatedAt": "2026-06-06T15:12:12.297Z",
+  "date": "2026-06-06",
   "slot": "evening",
   "locationName": "חולון",
   "lat": 32.0171,
@@ -9,10 +9,10 @@
   "weather": {
     "source": "open-meteo",
     "locationLine": "חולון, ישראל",
-    "dateLine": "יום שישי, 5 ביוני 2026",
+    "dateLine": "יום שבת, 6 ביוני 2026",
     "today": {
-      "summary": "שמיים בהירים",
-      "tempRange": "19-27",
+      "summary": "בהיר ברובו",
+      "tempRange": "19-29",
       "humidity": 60,
       "periods": [
         {
@@ -29,58 +29,57 @@
         },
         {
           "name": "ערב",
-          "label": "בהיר ברובו",
-          "icon": "sun",
+          "label": "מעונן חלקית",
+          "icon": "partly",
           "temp": 24
         }
       ]
     },
     "ahead": [
       {
-        "dayLabel": "יום שבת",
-        "high": 29,
-        "low": 18,
-        "icon": "sun",
-        "label": "בהיר ברובו"
-      },
-      {
         "dayLabel": "יום ראשון",
         "high": 27,
-        "low": 21,
+        "low": 20,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
       {
         "dayLabel": "יום שני",
         "high": 27,
-        "low": 19,
+        "low": 20,
         "icon": "partly",
         "label": "מעונן חלקית"
+      },
+      {
+        "dayLabel": "יום שלישי",
+        "high": 27,
+        "low": 20,
+        "icon": "partly",
+        "label": "ערפל"
       }
     ],
     "hero": {
       "icon": "sun",
-      "summary": "שמיים בהירים",
-      "tempHigh": 27,
+      "summary": "בהיר ברובו",
+      "tempHigh": 29,
       "sunrise": "05:34",
       "sunset": "19:44",
       "wind": "רוח מתונה · 17 קמ״ש",
-      "trend": "מחר חם יותר (+2°)"
+      "trend": "מחר קריר יותר (-2°)"
     }
   },
   "background": {
     "source": "openai",
     "provider": "openai",
-    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-05/evening/bg.jpg",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-06/evening/bg.jpg",
     "imageUrl": "bg.jpg",
     "model": "gpt-image-1-mini",
-    "style": "graphic",
+    "style": "botanical",
     "slot": "evening",
-    "dateKey": "2026-06-05",
+    "dateKey": "2026-06-06",
     "theme": "clear",
-    "prompt": "Create ONE full-bleed 800x480 landscape background image for a weather screen. Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels. Art style for this calendar day (same style for morning and evening): minimal graphic design background, flat shapes, bold color blocks, clean poster aesthetic. Time of day for this image: evening. Lighting: evening atmosphere: golden hour or dusk, warm low light, long soft shadows, sky with sunset oranges and purples, end-of-day calm. Weather in the artwork must match: clear sunny sky, warm golden light, open horizon. Temperature feel in the scene: warm pleasant summer day. Conditions: שמיים בהירים. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nlush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\nan airy Mediterranean urban atmosphere inspired by central Israel, with open sky, a subtle city skyline, light-colored apartment buildings, a few palm trees, small areas of urban greenery, and a calm visually pleasing composition.\nUse חולון as the location mood when it helps the scene feel specific and believable.\nThe scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.\n\nTime of day:\nevening\n\nLighting:\ncalm evening atmosphere, warm golden-hour light, soft sunset glow, relaxed and elegant mood\n\nWeather:\nThe weather shown in the artwork must match: בהיר ברובו.\nVisual atmosphere: bright clear summer sky, warm sunlight, crisp visibility, soft airy atmosphere.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nPlace most of the scenic detail on the left and center-left areas.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower area visually calm enough for future forecast cards.\nDo not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.\nDo not place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nwarm peach, soft gold, sunset orange, dusty blue, Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
     "size": "1536x1024",
     "quality": "low"
-  },
-  "prompt": "Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: שמיים בהירים. Ahead: יום שבת 29/18, יום ראשון 27/21, יום שני 27/19. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
+  }
 }
