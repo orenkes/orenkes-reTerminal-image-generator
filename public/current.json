@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-06T15:12:12.297Z",
-  "date": "2026-06-06",
-  "slot": "evening",
+  "generatedAt": "2026-06-07T04:41:34.338Z",
+  "date": "2026-06-07",
+  "slot": "morning",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
@@ -9,15 +9,15 @@
   "weather": {
     "source": "open-meteo",
     "locationLine": "חולון, ישראל",
-    "dateLine": "יום שבת, 6 ביוני 2026",
+    "dateLine": "יום ראשון, 7 ביוני 2026",
     "today": {
-      "summary": "בהיר ברובו",
-      "tempRange": "19-29",
+      "summary": "מעונן חלקית",
+      "tempRange": "21-27",
       "humidity": 60,
       "periods": [
         {
           "name": "בוקר",
-          "label": "מעונן חלקית",
+          "label": "ערפל",
           "icon": "partly",
           "temp": 23
         },
@@ -29,29 +29,29 @@
         },
         {
           "name": "ערב",
-          "label": "מעונן חלקית",
-          "icon": "partly",
+          "label": "בהיר ברובו",
+          "icon": "sun",
           "temp": 24
         }
       ]
     },
     "ahead": [
       {
-        "dayLabel": "יום ראשון",
-        "high": 27,
-        "low": 20,
-        "icon": "partly",
-        "label": "מעונן חלקית"
-      },
-      {
         "dayLabel": "יום שני",
         "high": 27,
-        "low": 20,
+        "low": 21,
         "icon": "partly",
-        "label": "מעונן חלקית"
+        "label": "מעונן"
       },
       {
         "dayLabel": "יום שלישי",
+        "high": 27,
+        "low": 21,
+        "icon": "partly",
+        "label": "ערפל"
+      },
+      {
+        "dayLabel": "יום רביעי",
         "high": 27,
         "low": 20,
         "icon": "partly",
@@ -59,26 +59,26 @@
       }
     ],
     "hero": {
-      "icon": "sun",
-      "summary": "בהיר ברובו",
-      "tempHigh": 29,
+      "icon": "partly",
+      "summary": "מעונן חלקית",
+      "tempHigh": 27,
       "sunrise": "05:34",
-      "sunset": "19:44",
-      "wind": "רוח מתונה · 17 קמ״ש",
-      "trend": "מחר קריר יותר (-2°)"
+      "sunset": "19:45",
+      "wind": "רוח מתונה · 16 קמ״ש",
+      "trend": "מחר מזג דומה"
     }
   },
   "background": {
     "source": "openai",
     "provider": "openai",
-    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-06/evening/bg.jpg",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-07/morning/bg.jpg",
     "imageUrl": "bg.jpg",
     "model": "gpt-image-1-mini",
-    "style": "botanical",
-    "slot": "evening",
-    "dateKey": "2026-06-06",
-    "theme": "clear",
-    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nlush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\nan airy Mediterranean urban atmosphere inspired by central Israel, with open sky, a subtle city skyline, light-colored apartment buildings, a few palm trees, small areas of urban greenery, and a calm visually pleasing composition.\nUse חולון as the location mood when it helps the scene feel specific and believable.\nThe scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.\n\nTime of day:\nevening\n\nLighting:\ncalm evening atmosphere, warm golden-hour light, soft sunset glow, relaxed and elegant mood\n\nWeather:\nThe weather shown in the artwork must match: בהיר ברובו.\nVisual atmosphere: bright clear summer sky, warm sunlight, crisp visibility, soft airy atmosphere.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nPlace most of the scenic detail on the left and center-left areas.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower area visually calm enough for future forecast cards.\nDo not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.\nDo not place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nwarm peach, soft gold, sunset orange, dusty blue, Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
+    "style": "urban",
+    "slot": "morning",
+    "dateKey": "2026-06-07",
+    "theme": "cloudy",
+    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nmodern urban scenic illustration, clean metropolitan atmosphere, elegant city-park environment, polished contemporary look\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na serene urban park scene inspired by central Israel, with walking paths, palm trees, light greenery, a few distant apartment buildings, and a calm open sky.\nUse חולון as the location mood when it helps the scene feel specific and believable.\nThe scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.\n\nTime of day:\nmorning\n\nLighting:\nfresh morning atmosphere, soft cool-warm light, gentle brightness, subtle sunrise glow\n\nWeather:\nThe weather shown in the artwork must match: מעונן חלקית.\nVisual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nPlace most of the scenic detail on the left and center-left areas.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower area visually calm enough for future forecast cards.\nDo not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.\nDo not place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nmuted sky blues, soft grays, warm whites, fresh Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
     "size": "1536x1024",
     "quality": "low"
   }
