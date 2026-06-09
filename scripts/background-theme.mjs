@@ -346,7 +346,6 @@ export function buildOpenAiBackgroundPrompt({
     "",
     "Scene:",
     `${scene.prompt}.`,
-    `Use ${place} as the location mood when it helps the scene feel specific and believable.`,
     "The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.",
     "",
     "Time of day:",
