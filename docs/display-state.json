@@ -1,10 +1,10 @@
 {
   "date": "2026-06-12",
   "mode": "weather",
-  "slot": "morning",
-  "archiveUrl": "/days/2026-06-12/morning/index.html",
+  "slot": "evening",
+  "archiveUrl": "/days/2026-06-12/evening/index.html",
   "revertAt": null,
   "revertSlot": null,
   "alternateId": null,
-  "updatedAt": "2026-06-12T01:00:28.126Z"
+  "updatedAt": "2026-06-12T15:00:25.034Z"
 }
