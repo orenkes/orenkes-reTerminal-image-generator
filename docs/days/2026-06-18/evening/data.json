@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-06-18T15:00:15.667Z",
+  "date": "2026-06-18",
+  "slot": "evening",
+  "locationName": "חולון",
+  "lat": 32.0171,
+  "lon": 34.7454,
+  "timeZone": "Asia/Jerusalem",
+  "weather": {
+    "source": "open-meteo",
+    "locationLine": "חולון, ישראל",
+    "dateLine": "יום חמישי, 18 ביוני 2026",
+    "today": {
+      "summary": "מעונן חלקית",
+      "tempRange": "22-28",
+      "humidity": 60,
+      "periods": [
+        {
+          "name": "בוקר",
+          "label": "מעונן חלקית",
+          "icon": "partly",
+          "temp": 25
+        },
+        {
+          "name": "צהריים",
+          "label": "בהיר ברובו",
+          "icon": "sun",
+          "temp": 28
+        },
+        {
+          "name": "ערב",
+          "label": "בהיר ברובו",
+          "icon": "sun",
+          "temp": 25
+        }
+      ]
+    },
+    "ahead": [
+      {
+        "dayLabel": "יום שישי",
+        "high": 28,
+        "low": 21,
+        "icon": "partly",
+        "label": "מעונן חלקית"
+      },
+      {
+        "dayLabel": "יום שבת",
+        "high": 29,
+        "low": 22,
+        "icon": "partly",
+        "label": "מעונן חלקית"
+      },
+      {
+        "dayLabel": "יום ראשון",
+        "high": 28,
+        "low": 22,
+        "icon": "partly",
+        "label": "מעונן חלקית"
+      }
+    ],
+    "hero": {
+      "icon": "partly",
+      "summary": "מעונן חלקית",
+      "tempHigh": 28,
+      "sunrise": "05:34",
+      "sunset": "19:49",
+      "wind": "רוח מתונה · 19 קמ״ש",
+      "trend": "מחר מזג דומה"
+    }
+  },
+  "background": {
+    "source": "openai",
+    "provider": "openai",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-06-18/evening/bg.jpg",
+    "imageUrl": "bg.jpg",
+    "model": "gpt-image-1-mini",
+    "style": "illustrated",
+    "slot": "evening",
+    "dateKey": "2026-06-18",
+    "theme": "cloudy",
+    "prompt": "Create ONE full-bleed 800x480 landscape background image for a weather screen. Single continuous scene filling the entire frame — no empty areas, no flat white bands, no UI panels. Art style for this calendar day (same style for morning and evening): hand-painted watercolor illustration, artistic brush strokes, paper texture feel. Time of day for this image: evening. Lighting: evening atmosphere: golden hour or dusk, warm low light, long soft shadows, sky with sunset oranges and purples, end-of-day calm. Weather in the artwork must match: soft cloudy sky, diffused daylight, calm atmosphere. Temperature feel in the scene: warm pleasant summer day. Conditions: מעונן חלקית. Place: חולון, Mediterranean coast. Do not draw any text, letters, numbers, icons, logos, watermarks, or UI widgets. Single cohesive image, no collage.",
+    "size": "1536x1024",
+    "quality": "low"
+  },
+  "prompt": "Create a single full-bleed landscape background for an e-ink weather display. No logos, no watermark, no UI chrome, no blank margins for text. Location mood: חולון, ישראל. Weather today: מעונן חלקית. Ahead: יום שישי 28/21, יום שבת 29/22, יום ראשון 28/22. Visual direction: soft watercolor landscape. Calm, bright, readable, Israeli summer feel."
+}
