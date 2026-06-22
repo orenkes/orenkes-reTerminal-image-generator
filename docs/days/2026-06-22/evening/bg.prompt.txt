@@ -1,0 +1,50 @@
+Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.
+
+Style:
+refined painterly illustration, soft brushstroke texture, artistic clouds, atmospheric depth, calm and premium look
+
+Overall look:
+premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.
+
+Scene:
+a refined Mediterranean urban illustration inspired by central Israel, with pale apartment buildings, balconies, rooftop lines, palm trees, subtle urban greenery, elegant city rhythm, open sky, and a calm premium editorial composition.
+The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.
+
+Time of day:
+evening
+
+Lighting:
+calm evening atmosphere, warm golden-hour light, soft sunset glow, relaxed and elegant mood
+
+Weather:
+The weather shown in the artwork must match: מעונן חלקית.
+Visual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.
+
+Temperature feel:
+warm pleasant summer day
+
+Composition:
+wide cinematic composition with clear depth, including foreground, midground, and background.
+Keep the image cohesive and natural, not like a collage.
+The right side is reserved for Hebrew text overlay.
+Place most of the scenic detail on the left and center-left areas.
+Leave the upper-right area visually calm and relatively low-detail for future text overlay.
+Leave a broad lower area visually calm enough for future forecast cards.
+Do not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.
+The bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.
+Do not place important subjects, focal points, people, animals, or key scenic details in the lower area.
+Add only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.
+
+Ambient life:
+Add a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.
+Keep them secondary and unobtrusive.
+
+Color palette:
+warm peach, soft gold, sunset orange, dusty blue, Mediterranean greens
+
+Important:
+do not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.
+No flat empty bands.
+No collage.
+No split layout.
+Single cohesive image only.

@@ -5,6 +5,11 @@
       "generatedAt": "2026-06-22T01:00:03.970Z",
       "path": "morning",
       "summary": "מעונן חלקית"
+    },
+    "evening": {
+      "generatedAt": "2026-06-22T15:00:10.319Z",
+      "path": "evening",
+      "summary": "מעונן חלקית"
     }
   },
   "alternates": []
