@@ -10,6 +10,9 @@ Scene:
 a sky-dominant scenic composition with magnificent layered clouds, soft sunbeams, open luminous atmosphere, and subtle cinematic depth.
 The scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.
 
+Focal Subject (Left-Center Placement):
+On the middle-left area (positioned strictly between 30% and 65% vertical height, above the bottom forecast dock), feature a majestic oak tree with a subtle, cute Ghibli-inspired woodland creature resting peacefully on a wooden bench.
+
 Time of day:
 evening
 
@@ -27,13 +30,12 @@ Composition:
 wide cinematic composition with clear depth, including foreground, midground, and background.
 Keep the image cohesive and natural, not like a collage.
 The right side is reserved for Hebrew text overlay.
-Place most of the scenic detail on the left and center-left areas.
+CRITICAL PLACEMENT RULE: Place any main focal subject strictly in the middle-left area of the frame (between 30% and 65% vertical height).
 Leave the upper-right area visually calm and relatively low-detail for future text overlay.
-Leave a broad lower area visually calm enough for future forecast cards.
-Do not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.
-The bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.
-Do not place important subjects, focal points, people, animals, or key scenic details in the lower area.
-Add only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.
+Leave a broad lower 35% area visually calm and free of main subjects, strictly reserved for forecast UI cards.
+Do not place tall or dominant elements such as trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.
+The bottom 25% to 35% of the image is a UI-covered area and will be hidden by forecast cards. Do NOT place important subjects, focal points, people, animals, or key scenic details in the lower area.
+Add only subtle secondary details in the lower area, such as soft ground texture, gentle grass, or calm atmosphere.
 
 Ambient life:
 Add a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.
