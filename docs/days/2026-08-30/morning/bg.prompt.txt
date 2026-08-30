@@ -1,13 +1,13 @@
 Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.
 
 Style:
-modern urban scenic illustration, clean metropolitan atmosphere, elegant city-park environment, polished contemporary look
+minimal airy illustration, soft gradients, restrained detail, clean shapes, elegant modern background
 
 Overall look:
 premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.
 
 Scene:
-a sky-dominant scenic composition with beautiful layered clouds, soft light, open atmosphere, and subtle depth, designed to express the feeling of the weather in an elegant way.
+a serene urban park scene inspired by central Israel, with walking paths, palm trees, light greenery, a few distant apartment buildings, and a calm open sky.
 The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.
 
 Time of day:
@@ -17,8 +17,8 @@ Lighting:
 fresh morning atmosphere, soft cool-warm light, gentle brightness, subtle sunrise glow
 
 Weather:
-The weather shown in the artwork must match: בהיר עד מעונן חלקית.
-Visual atmosphere: bright clear summer sky, warm sunlight, crisp visibility, soft airy atmosphere.
+The weather shown in the artwork must match: מעונן חלקית.
+Visual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.
 
 Temperature feel:
 warm pleasant summer day
@@ -40,7 +40,7 @@ Add a subtle sense of life with only minor background accents such as a few bird
 Keep them secondary and unobtrusive.
 
 Color palette:
-soft sky blues, warm sunlight whites, Mediterranean greens, gentle golden highlights
+muted sky blues, soft grays, warm whites, fresh Mediterranean greens
 
 Important:
 do not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.

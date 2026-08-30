@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-17",
+  "slots": {
+    "morning": {
+      "generatedAt": "2026-07-17T03:00:36.188Z",
+      "path": "morning",
+      "summary": "מעונן חלקית"
+    },
+    "evening": {
+      "generatedAt": "2026-07-17T15:00:37.646Z",
+      "path": "evening",
+      "summary": "מעונן חלקית"
+    }
+  },
+  "alternates": []
+}
