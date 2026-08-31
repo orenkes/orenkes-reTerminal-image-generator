@@ -75,25 +75,25 @@ export const sceneMap = {
 
 export const focalElementMap = {
   dragonairSerpent:
-    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature an elegant, slender blue serpentine dragon creature with a white horn, small feather-like ears, and a crystal neck orb, floating gracefully near a Japanese wooden bridge over a lotus stream.",
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature the character Dragonair, rendered in accurate official anime character design style: a sleek sky-blue serpentine dragon with a small white horn on its forehead, white wing-like feathery ears, white belly, and dark blue crystal neck orb, floating gracefully near a Japanese wooden bridge over a lotus stream.",
   bulbasaurDino:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute small green dinosaur-like creature with a blooming plant bulb on its back, resting happily under a blooming Japanese cherry blossom branch.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Bulbasaur, rendered in accurate official anime character design style: a small teal-green dinosaur with dark green spots and a large green plant bulb on its back, sitting under a blooming Japanese cherry blossom branch.",
   eeveeFox:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute small brown fox-like creature with a fluffy cream fur collar and bushy tail, sitting on a second-story wooden window balcony.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Eevee, rendered in accurate official anime character design style: a small brown fox-like creature with a fluffy cream collar and bushy cream-tipped tail, sitting on a second-story wooden window balcony.",
   pikachuMascot:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a chubby golden-yellow electric rodent creature with red cheek spots and a lightning-bolt tail, perched high on a vintage Japanese lantern post.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Pikachu, rendered in accurate official anime character design style: a cute chubby yellow electric mouse with red cheek spots, black-tipped ears, and a lightning-bolt tail, perched high on a vintage Japanese lantern post.",
   snorlaxGiant:
-    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature a giant chubby dark-teal and cream furred bear creature napping peacefully on an elevated wooden temple porch.",
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature the character Snorlax, rendered in accurate official anime character design style: a giant chubby sleepy dark-teal and cream furred creature with closed eyes and small fangs, napping peacefully on an elevated wooden temple porch.",
   vulpixFox:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a beautiful small reddish-brown fox creature with six curly tails, sitting near an elevated stone lantern.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Vulpix, rendered in accurate official anime character design style: a reddish-brown fox creature with six curled orange tails and a curly tuft of hair on its head, sitting near an elevated stone lantern.",
   psyduckKoiPond:
-    "On the middle-left area (positioned high up between 45% and 70% vertical height), feature a cute confused yellow duck creature holding its head with both paws, floating happily on an elevated stone garden fountain.",
+    "On the middle-left area (positioned high up between 45% and 70% vertical height), feature the character Psyduck, rendered in accurate official anime character design style: a chubby yellow duck creature with three black hairs on its head, holding its head with both paws, floating happily on an elevated stone garden fountain.",
   totoroSpirit:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a large, friendly grey fluffy woodland spirit creature with tall rabbit-like ears and a white patterned belly, resting comfortably on an elevated tree branch.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Totoro, rendered in accurate official anime character design style: a large friendly grey fluffy woodland spirit with tall ears and a white patterned belly, resting comfortably on an elevated tree branch.",
   noFaceSpirit:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a gentle dark shadow spirit wearing a simple white oval mask, floating softly near lush green leaves.",
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character No-Face (Kaonashi), rendered in accurate official anime character design style: a gentle dark shadow spirit wearing a simple white oval mask, floating softly near lush green leaves.",
   jijiBlackCat:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute sleek black cat with a red ribbon bow sitting on a second-story wooden window ledge."
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Jiji the black cat, rendered in accurate official anime character design style: a sleek black cat with large curious eyes and a red ribbon bow sitting on a second-story wooden window ledge."
 };
 
 export const FOCAL_KEYS = Object.keys(focalElementMap);
