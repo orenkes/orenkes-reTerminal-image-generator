@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-30T15:00:04.015Z",
-  "date": "2026-08-30",
-  "slot": "evening",
+  "generatedAt": "2026-08-31T05:24:47.720Z",
+  "date": "2026-08-31",
+  "slot": "morning",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
@@ -9,49 +9,49 @@
   "weather": {
     "source": "open-meteo",
     "locationLine": "חולון, ישראל",
-    "dateLine": "יום ראשון, 30 באוגוסט 2026",
+    "dateLine": "יום שני, 31 באוגוסט 2026",
     "today": {
       "summary": "מעונן חלקית",
-      "tempRange": "26-31",
+      "tempRange": "27-31",
       "humidity": 60,
       "periods": [
         {
           "name": "בוקר",
           "label": "מעונן חלקית",
           "icon": "partly",
-          "temp": 28
+          "temp": 27
         },
         {
           "name": "צהריים",
           "label": "בהיר ברובו",
           "icon": "sun",
-          "temp": 31
+          "temp": 30
         },
         {
           "name": "ערב",
-          "label": "בהיר ברובו",
-          "icon": "sun",
+          "label": "מעונן חלקית",
+          "icon": "partly",
           "temp": 28
         }
       ]
     },
     "ahead": [
       {
-        "dayLabel": "יום שני",
+        "dayLabel": "יום שלישי",
         "high": 31,
-        "low": 27,
+        "low": 24,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
       {
-        "dayLabel": "יום שלישי",
+        "dayLabel": "יום רביעי",
         "high": 31,
         "low": 25,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
       {
-        "dayLabel": "יום רביעי",
+        "dayLabel": "יום חמישי",
         "high": 31,
         "low": 25,
         "icon": "partly",
@@ -63,22 +63,22 @@
       "summary": "מעונן חלקית",
       "tempHigh": 31,
       "sunrise": "06:15",
-      "sunset": "19:08",
-      "wind": "רוח מתונה · 18 קמ״ש",
+      "sunset": "19:06",
+      "wind": "רוח מתונה · 17 קמ״ש",
       "trend": "מחר מזג דומה"
     }
   },
   "background": {
     "source": "openai",
     "provider": "openai",
-    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-08-30/evening/bg.jpg",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-08-31/morning/bg.jpg",
     "imageUrl": "bg.jpg",
     "model": "gpt-image-1-mini",
-    "style": "graphic",
-    "slot": "evening",
-    "dateKey": "2026-08-30",
+    "style": "anime",
+    "slot": "morning",
+    "dateKey": "2026-08-31",
     "theme": "cloudy",
-    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nminimal vector anime illustration, clean pastel gradients, simple shapes with soft lighting, restrained detail, modern retro-poster aesthetic\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na sky-dominant scenic composition with magnificent layered clouds, soft sunbeams, open luminous atmosphere, and subtle cinematic depth.\nThe scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.\n\nFocal Subject (Left-Center Placement):\nOn the middle-left area (positioned strictly between 30% and 65% vertical height, above the bottom forecast dock), feature a majestic oak tree with a subtle, cute Ghibli-inspired woodland creature resting peacefully on a wooden bench.\n\nTime of day:\nevening\n\nLighting:\ncalm evening atmosphere, warm golden-hour light, soft sunset glow, relaxed and elegant mood\n\nWeather:\nThe weather shown in the artwork must match: מעונן חלקית.\nVisual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nCRITICAL PLACEMENT RULE: Place any main focal subject strictly in the middle-left area of the frame (between 30% and 65% vertical height).\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower 35% area visually calm and free of main subjects, strictly reserved for forecast UI cards.\nDo not place tall or dominant elements such as trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and will be hidden by forecast cards. Do NOT place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, gentle grass, or calm atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nwarm peach, soft gold, sunset orange, dusty blue, Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
+    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nluminous scenic anime illustration in the style of Makoto Shinkai, highly detailed background art, dramatic lighting, sunbeams filtering through atmosphere, soft cel shading, power lines silhouette against a vibrant painterly sky, clean linework, nostalgic and polished anime aesthetic\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na stylized atmospheric weather scene focused on sky, luminous light rays, clouds, soft atmospheric depth, and elegant seasonal mood.\nThe scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.\n\nFocal Subject (Left-Center Placement):\nOn the upper-left sky area (positioned high up between 50% and 75% vertical height), feature a cute, whimsical Ghibli-inspired flying creature soaring gracefully with a colorful paper kite.\n\nTime of day:\nmorning\n\nLighting:\nfresh morning atmosphere, soft cool-warm light, gentle brightness, subtle sunrise glow\n\nWeather:\nThe weather shown in the artwork must match: מעונן חלקית.\nVisual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nCRITICAL ELEVATION RULE: Place the main focal subject HIGH UP in the middle-left area of the frame (strictly between 45% and 75% vertical height from the bottom). Absolutely NO focal subjects, benches, or main objects should rest on the ground level or bottom 35%, as the entire lower third of the screen is covered by UI cards.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower 35% area visually calm and free of main subjects, strictly reserved for forecast UI cards.\nDo not place tall or dominant elements such as trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and will be hidden by forecast cards. Do NOT place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, gentle grass, or calm atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nmuted sky blues, soft grays, warm whites, fresh Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
     "size": "1536x1024",
     "quality": "low"
   }
