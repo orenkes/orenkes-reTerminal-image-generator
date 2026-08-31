@@ -35,15 +35,15 @@ export const WEATHER_THEMES = {
 
 export const styleMap = {
   anime:
-    "anime-inspired scenic illustration, refined soft cel shading, painterly sky, luminous atmosphere, clean linework, polished modern Japanese-inspired background art",
+    "luminous scenic anime illustration in the style of Makoto Shinkai, highly detailed background art, dramatic lighting, sunbeams filtering through atmosphere, soft cel shading, power lines silhouette against a vibrant painterly sky, clean linework, nostalgic and polished anime aesthetic",
+  ghibli:
+    "nostalgic scenic background art in the style of Studio Ghibli, hand-painted gouache illustration, soft warm daylight, lush green foliage, rustic charm, cozy hand-painted aesthetic, dreamlike landscape",
   watercolor:
-    "soft watercolor scenic illustration, delicate washes of color, airy sky, subtle textures, elegant and calm composition",
+    "delicate Japanese watercolor and ink wash scenic illustration, soft washes of color, mist and atmospheric depth, elegant minimal outlines, calm and serene mood",
   painterly:
     "refined painterly illustration, soft brushstroke texture, artistic clouds, atmospheric depth, calm and premium look",
-  urban:
-    "modern urban illustration, clean metropolitan skyline, subtle Mediterranean architecture, polished contemporary atmosphere",
   minimal:
-    "minimal airy illustration, soft gradients, restrained detail, clean shapes, elegant modern background",
+    "minimal vector anime illustration, clean pastel gradients, simple shapes with soft lighting, restrained detail, modern retro-poster aesthetic",
   pastel:
     "soft pastel illustration, gentle color transitions, dreamy sky, subtle atmospheric depth, warm and relaxed mood",
   gouache:
@@ -53,75 +53,77 @@ export const styleMap = {
   soft3d:
     "soft stylized 3D illustration, rounded forms, subtle depth, diffused lighting, calm premium product-illustration aesthetic",
   dreamy:
-    "dreamy atmospheric illustration, soft glowing sky, gentle haze, subtle light diffusion, serene and slightly magical mood",
-  cinematic:
-    "cinematic scenic illustration, atmospheric lighting, layered depth, refined composition, subtle dramatic sky, calm and elegant mood",
-  inkWash:
-    "delicate ink-wash illustration, soft atmospheric layers, subtle watercolor textures, calm minimal scenery, elegant artistic mood",
-  flatVector:
-    "clean flat-vector scenic illustration, simplified shapes, restrained palette, subtle gradients, modern editorial style",
-  mediterranean:
-    "Mediterranean-inspired illustrated scenery, pale stone buildings, subtle balconies, palm trees, warm sunlight, soft urban greenery, relaxed coastal-city atmosphere",
-  retroPoster:
-    "refined retro travel-poster illustration, simplified geometry, soft vintage palette, clean composition, elegant modernized mid-century feel"
+    "dreamy atmospheric illustration, soft glowing sky, gentle haze, subtle light diffusion, serene and slightly magical mood"
 };
 
 export const sceneMap = {
   atmosphericWeather:
-    "a stylized atmospheric weather scene focused on sky, light, clouds, soft depth, and elegant seasonal mood, with only a subtle distant horizon or faint silhouettes if needed",
+    "a stylized atmospheric weather scene focused on sky, luminous light rays, clouds, soft atmospheric depth, and elegant seasonal mood",
   skyHero:
-    "a sky-dominant scenic composition with beautiful layered clouds, soft light, open atmosphere, and subtle depth, designed to express the feeling of the weather in an elegant way",
+    "a sky-dominant scenic composition with magnificent layered clouds, soft sunbeams, open luminous atmosphere, and subtle cinematic depth",
   minimalHorizon:
-    "a calm minimal horizon scene with open sky, restrained detail, soft atmospheric layers, and a clean elegant composition",
-  airyUrban:
-    "an airy Mediterranean urban atmosphere inspired by central Israel, with open sky, a subtle city skyline, light-colored apartment buildings, a few palm trees, small areas of urban greenery, and a calm visually pleasing composition",
-  urbanEditorial:
-    "a refined Mediterranean urban illustration inspired by central Israel, with pale apartment buildings, balconies, rooftop lines, palm trees, subtle urban greenery, elegant city rhythm, open sky, and a calm premium editorial composition",
-  parkUrban:
-    "a serene urban park scene inspired by central Israel, with walking paths, palm trees, light greenery, a few distant apartment buildings, and a calm open sky"
+    "a calm minimal horizon scene with open sky, restrained detail, soft atmospheric haze, and a clean elegant composition",
+  suburbanStreet:
+    "a peaceful anime suburban street with a railway crossing, clean residential houses, utility poles with power lines, small green gardens, open sky, and a serene atmosphere",
+  cozyCanal:
+    "a charming quiet water canal in a peaceful Japanese neighborhood, with walking paths, wooden fences, lush green trees, and clear sky reflections",
+  hillsideOverlook:
+    "a serene hillside overlook above a quiet town, with green trees, utility poles, soft mist in the distance, and an expansive open sky",
+  openRailway:
+    "a wide open countryside landscape with train tracks extending towards the horizon under a dramatic, beautiful sky"
 };
+
+export const focalElementMap = {
+  dragonairSerpent:
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature an elegant, slender blue serpentine dragon creature with a white horn, small feather-like ears, and a crystal neck orb, floating gracefully near a Japanese wooden bridge over a lotus stream.",
+  bulbasaurDino:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute small green dinosaur-like creature with a blooming plant bulb on its back, resting happily under a blooming Japanese cherry blossom branch.",
+  eeveeFox:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute small brown fox-like creature with a fluffy cream fur collar and bushy tail, sitting on a second-story wooden window balcony.",
+  pikachuMascot:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a chubby golden-yellow electric rodent creature with red cheek spots and a lightning-bolt tail, perched high on a vintage Japanese lantern post.",
+  snorlaxGiant:
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature a giant chubby dark-teal and cream furred bear creature napping peacefully on an elevated wooden temple porch.",
+  vulpixFox:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a beautiful small reddish-brown fox creature with six curly tails, sitting near an elevated stone lantern.",
+  psyduckKoiPond:
+    "On the middle-left area (positioned high up between 45% and 70% vertical height), feature a cute confused yellow duck creature holding its head with both paws, floating happily on an elevated stone garden fountain.",
+  totoroSpirit:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a large, friendly grey fluffy woodland spirit creature with tall rabbit-like ears and a white patterned belly, resting comfortably on an elevated tree branch.",
+  noFaceSpirit:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a gentle dark shadow spirit wearing a simple white oval mask, floating softly near lush green leaves.",
+  jijiBlackCat:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute sleek black cat with a red ribbon bow sitting on a second-story wooden window ledge."
+};
+
+export const FOCAL_KEYS = Object.keys(focalElementMap);
+
+export function getFocalElementForDate(dateKey) {
+  let hash = 0;
+  for (const ch of String(dateKey || "")) {
+    hash = (hash * 31 + ch.charCodeAt(0)) >>> 0;
+  }
+  const key = FOCAL_KEYS[hash % FOCAL_KEYS.length];
+  return focalElementMap[key];
+}
 
 export const dailyStyleKeys = [
   "anime",
+  "ghibli",
   "watercolor",
   "painterly",
-  "urban",
-  "minimal",
-  "pastel",
-  "gouache",
-  "paperCut",
-  "soft3d",
-  "dreamy"
+  "minimal"
 ];
-
-export const occasionalStyleKeys = [
-  "cinematic",
-  "inkWash",
-  "flatVector",
-  "mediterranean",
-  "retroPoster"
-];
-
-export const preferredStylesByWeather = {
-  clear: ["anime", "watercolor", "pastel", "mediterranean", "soft3d", "retroPoster"],
-  sunny: ["anime", "watercolor", "pastel", "mediterranean", "soft3d", "retroPoster"],
-  partlyCloudy: ["anime", "painterly", "gouache", "dreamy", "urban"],
-  cloudy: ["watercolor", "gouache", "minimal", "inkWash", "dreamy"],
-  rainy: ["painterly", "urban", "cinematic", "inkWash", "dreamy"],
-  stormy: ["cinematic", "painterly", "urban"],
-  foggy: ["inkWash", "minimal", "dreamy", "watercolor"],
-  snow: ["watercolor", "gouache", "minimal", "dreamy"]
-};
 
 export const preferredScenesByWeather = {
-  clear: ["skyHero", "atmosphericWeather", "airyUrban", "urbanEditorial"],
-  sunny: ["skyHero", "atmosphericWeather", "airyUrban", "urbanEditorial"],
-  partlyCloudy: ["atmosphericWeather", "skyHero", "urbanEditorial", "parkUrban"],
-  cloudy: ["atmosphericWeather", "skyHero", "urbanEditorial", "parkUrban"],
-  rainy: ["atmosphericWeather", "urbanEditorial", "parkUrban", "skyHero"],
-  stormy: ["atmosphericWeather", "skyHero", "urbanEditorial"],
-  foggy: ["atmosphericWeather", "minimalHorizon", "skyHero"],
-  snow: ["atmosphericWeather", "minimalHorizon", "skyHero"]
+  clear: ["skyHero", "suburbanStreet", "hillsideOverlook", "openRailway"],
+  sunny: ["skyHero", "suburbanStreet", "hillsideOverlook", "openRailway"],
+  partlyCloudy: ["atmosphericWeather", "suburbanStreet", "cozyCanal", "hillsideOverlook"],
+  cloudy: ["atmosphericWeather", "cozyCanal", "suburbanStreet", "skyHero"],
+  rainy: ["cozyCanal", "suburbanStreet", "atmosphericWeather", "minimalHorizon"],
+  stormy: ["atmosphericWeather", "skyHero", "openRailway"],
+  foggy: ["atmosphericWeather", "minimalHorizon", "hillsideOverlook"],
+  snow: ["atmosphericWeather", "minimalHorizon", "suburbanStreet"]
 };
 
 export const weatherVisualMap = {
@@ -218,26 +220,24 @@ export function colorPaletteForWeather(weather, slot) {
 }
 
 export const BACKGROUND_STYLES = {
-  botanical: {
-    label: "צמחי",
-    artDirection:
-      "lush botanical scenic illustration, detailed leaves and organic textures, nature-focused composition, elegant garden atmosphere"
-  },
-  urban: {
-    label: "עירוני",
-    artDirection:
-      "modern urban scenic illustration, clean metropolitan atmosphere, elegant city-park environment, polished contemporary look"
-  },
   anime: {
-    label: "אנימה",
+    label: "אנימה שינקאי",
     artDirection: styleMap.anime
+  },
+  ghibli: {
+    label: "ג'יבלי כפרי",
+    artDirection: styleMap.ghibli
+  },
+  watercolor: {
+    label: "צבעי מים יפניים",
+    artDirection: styleMap.watercolor
   },
   illustrated: {
     label: "מצוייר",
     artDirection: styleMap.painterly
   },
   graphic: {
-    label: "גרפי",
+    label: "גרפי מינימליסטי",
     artDirection: styleMap.minimal
   }
 };
@@ -245,8 +245,8 @@ export const BACKGROUND_STYLES = {
 export const STYLE_KEYS = Object.keys(BACKGROUND_STYLES);
 
 export function resolveBackgroundStyle(styleKey) {
-  const key = String(styleKey || "illustrated").toLowerCase();
-  return BACKGROUND_STYLES[key] ? key : "illustrated";
+  const key = String(styleKey || "anime").toLowerCase();
+  return BACKGROUND_STYLES[key] ? key : "anime";
 }
 
 /** Same style all day; rotates by calendar date unless BACKGROUND_STYLE is set. */
@@ -277,12 +277,12 @@ export function slotDaypartAppearance(slot) {
 }
 
 const SCENE_KEYS_BY_WEATHER = {
-  sunny: ["skyHero", "atmosphericWeather", "airyUrban", "urbanEditorial"],
-  partlyCloudy: ["atmosphericWeather", "skyHero", "urbanEditorial", "parkUrban"],
-  cloudy: ["atmosphericWeather", "skyHero", "urbanEditorial", "parkUrban"],
-  rainy: ["atmosphericWeather", "urbanEditorial", "parkUrban", "skyHero"],
-  stormy: ["atmosphericWeather", "skyHero", "urbanEditorial"],
-  foggy: ["atmosphericWeather", "skyHero"]
+  sunny: ["skyHero", "suburbanStreet", "hillsideOverlook", "openRailway"],
+  partlyCloudy: ["atmosphericWeather", "suburbanStreet", "cozyCanal", "hillsideOverlook"],
+  cloudy: ["atmosphericWeather", "cozyCanal", "suburbanStreet", "skyHero"],
+  rainy: ["cozyCanal", "suburbanStreet", "atmosphericWeather", "minimalHorizon"],
+  stormy: ["atmosphericWeather", "skyHero", "openRailway"],
+  foggy: ["atmosphericWeather", "minimalHorizon", "hillsideOverlook"]
 };
 
 function getDayIndex(date = new Date()) {
@@ -334,6 +334,7 @@ export function buildOpenAiBackgroundPrompt({
   const lighting = lightingDescription(slot);
   const palette = colorPaletteForWeather(weather, slot);
   const scene = getSceneForDate({ date: dateKey ? new Date(dateKey) : new Date(), conditionKey: pickThemeFromWeather(weather) });
+  const focalElement = getFocalElementForDate(dateKey);
 
   return [
     "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.",
@@ -346,7 +347,10 @@ export function buildOpenAiBackgroundPrompt({
     "",
     "Scene:",
     `${scene.prompt}.`,
-    "The scene should feel like a pleasant Israeli city environment, airy, peaceful, and visually attractive.",
+    "The scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.",
+    "",
+    "Focal Subject (Left-Center Placement):",
+    focalElement,
     "",
     "Time of day:",
     slot === "evening" ? "evening" : "morning",
@@ -365,13 +369,12 @@ export function buildOpenAiBackgroundPrompt({
     "wide cinematic composition with clear depth, including foreground, midground, and background.",
     "Keep the image cohesive and natural, not like a collage.",
     "The right side is reserved for Hebrew text overlay.",
-    "Place most of the scenic detail on the left and center-left areas.",
+    "CRITICAL ELEVATION RULE: Place the main focal subject HIGH UP in the middle-left area of the frame (strictly between 45% and 75% vertical height from the bottom). Absolutely NO focal subjects, benches, or main objects should rest on the ground level or bottom 35%, as the entire lower third of the screen is covered by UI cards.",
     "Leave the upper-right area visually calm and relatively low-detail for future text overlay.",
-    "Leave a broad lower area visually calm enough for future forecast cards.",
-    "Do not place tall or dominant elements such as trees, palm trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.",
-    "The bottom 25% to 35% of the image is a UI-covered area and may be partially hidden by forecast cards or interface elements.",
-    "Do not place important subjects, focal points, people, animals, or key scenic details in the lower area.",
-    "Add only subtle secondary details in the lower area, such as soft ground texture, distant scenery, or gentle atmosphere.",
+    "Leave a broad lower 35% area visually calm and free of main subjects, strictly reserved for forecast UI cards.",
+    "Do not place tall or dominant elements such as trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.",
+    "The bottom 25% to 35% of the image is a UI-covered area and will be hidden by forecast cards. Do NOT place important subjects, focal points, people, animals, or key scenic details in the lower area.",
+    "Add only subtle secondary details in the lower area, such as soft ground texture, gentle grass, or calm atmosphere.",
     "",
     "Ambient life:",
     "Add a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.",
