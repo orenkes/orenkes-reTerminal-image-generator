@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-03T01:00:04.558Z",
+  "generatedAt": "2026-09-03T15:00:07.141Z",
   "date": "2026-09-03",
-  "slot": "morning",
+  "slot": "evening",
   "locationName": "חולון",
   "lat": 32.0171,
   "lon": 34.7454,
@@ -23,14 +23,14 @@
         },
         {
           "name": "צהריים",
-          "label": "בהיר ברובו",
-          "icon": "sun",
+          "label": "מעונן חלקית",
+          "icon": "partly",
           "temp": 31
         },
         {
           "name": "ערב",
-          "label": "בהיר ברובו",
-          "icon": "sun",
+          "label": "מעונן חלקית",
+          "icon": "partly",
           "temp": 28
         }
       ]
@@ -46,7 +46,7 @@
       {
         "dayLabel": "יום שבת",
         "high": 31,
-        "low": 25,
+        "low": 24,
         "icon": "partly",
         "label": "מעונן חלקית"
       },
@@ -69,17 +69,18 @@
     }
   },
   "background": {
-    "source": "openai",
-    "provider": "openai",
-    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-09-03/morning/bg.jpg",
+    "source": "unsplash",
+    "provider": "unsplash",
+    "localPath": "/Users/user/projects/reTerminal-image-generator/public/days/2026-09-03/evening/bg.jpg",
     "imageUrl": "bg.jpg",
-    "model": "gpt-image-1-mini",
-    "style": "anime",
-    "slot": "morning",
-    "dateKey": "2026-09-03",
+    "remoteUrl": "https://images.unsplash.com/photo-1764000571357-8e3f2c0a3399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjQ3NTZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0NDc2MTN8&ixlib=rb-4.1.0&q=80&w=1080",
+    "query": "soft watercolor cloudy sky pastoral landscape",
     "theme": "cloudy",
-    "prompt": "Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.\n\nStyle:\nluminous scenic anime illustration in the style of Makoto Shinkai, highly detailed background art, dramatic lighting, sunbeams filtering through atmosphere, soft cel shading, power lines silhouette against a vibrant painterly sky, clean linework, nostalgic and polished anime aesthetic\n\nOverall look:\npremium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.\n\nScene:\na sky-dominant scenic composition with magnificent layered clouds, soft sunbeams, open luminous atmosphere, and subtle cinematic depth.\nThe scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.\n\nFocal Subject (Left-Center Placement):\nOn the middle-left area (positioned high up between 45% and 75% vertical height), feature a subtle red wooden Torii gate nestled among soft green mossy rocks and foliage.\n\nTime of day:\nmorning\n\nLighting:\nfresh morning atmosphere, soft cool-warm light, gentle brightness, subtle sunrise glow\n\nWeather:\nThe weather shown in the artwork must match: מעונן חלקית.\nVisual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.\n\nTemperature feel:\nwarm pleasant summer day\n\nComposition:\nwide cinematic composition with clear depth, including foreground, midground, and background.\nKeep the image cohesive and natural, not like a collage.\nThe right side is reserved for Hebrew text overlay.\nCRITICAL ELEVATION RULE: Place the main focal subject HIGH UP in the middle-left area of the frame (strictly between 45% and 75% vertical height from the bottom). Absolutely NO focal subjects, benches, or main objects should rest on the ground level or bottom 35%, as the entire lower third of the screen is covered by UI cards.\nLeave the upper-right area visually calm and relatively low-detail for future text overlay.\nLeave a broad lower 35% area visually calm and free of main subjects, strictly reserved for forecast UI cards.\nDo not place tall or dominant elements such as trees, buildings, poles, animals, characters, or strong vertical focal points on the right side.\nThe bottom 25% to 35% of the image is a UI-covered area and will be hidden by forecast cards. Do NOT place important subjects, focal points, people, animals, or key scenic details in the lower area.\nAdd only subtle secondary details in the lower area, such as soft ground texture, gentle grass, or calm atmosphere.\n\nAmbient life:\nAdd a subtle sense of life with only minor background accents such as a few birds in the sky or tiny distant human silhouettes.\nKeep them secondary and unobtrusive.\n\nColor palette:\nmuted sky blues, soft grays, warm whites, fresh Mediterranean greens\n\nImportant:\ndo not draw any text, letters, numbers, icons, logos, watermarks, forecast cards, white panels, UI widgets, or interface elements.\nNo flat empty bands.\nNo collage.\nNo split layout.\nSingle cohesive image only.",
-    "size": "1536x1024",
-    "quality": "low"
+    "attribution": {
+      "name": "Andrew Hall",
+      "username": "andrew_hall",
+      "profileUrl": "https://unsplash.com/@andrew_hall",
+      "photoUrl": "https://unsplash.com/photos/green-rolling-hills-with-scattered-sheep-under-a-cloudy-sky-SXPsyyza43g"
+    }
   }
 }
