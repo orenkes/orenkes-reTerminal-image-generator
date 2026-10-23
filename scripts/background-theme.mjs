@@ -74,26 +74,18 @@ export const sceneMap = {
 };
 
 export const focalElementMap = {
-  dragonairSerpent:
-    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature the character Dragonair, rendered in accurate official anime character design style: a sleek sky-blue serpentine dragon with a small white horn on its forehead, white wing-like feathery ears, white belly, and dark blue crystal neck orb, floating gracefully near a Japanese wooden bridge over a lotus stream.",
-  bulbasaurDino:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Bulbasaur, rendered in accurate official anime character design style: a small teal-green dinosaur with dark green spots and a large green plant bulb on its back, sitting under a blooming Japanese cherry blossom branch.",
-  eeveeFox:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Eevee, rendered in accurate official anime character design style: a small brown fox-like creature with a fluffy cream collar and bushy cream-tipped tail, sitting on a second-story wooden window balcony.",
-  pikachuMascot:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Pikachu, rendered in accurate official anime character design style: a cute chubby yellow electric mouse with red cheek spots, black-tipped ears, and a lightning-bolt tail, perched high on a vintage Japanese lantern post.",
-  snorlaxGiant:
-    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature the character Snorlax, rendered in accurate official anime character design style: a giant chubby sleepy dark-teal and cream furred creature with closed eyes and small fangs, napping peacefully on an elevated wooden temple porch.",
-  vulpixFox:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Vulpix, rendered in accurate official anime character design style: a reddish-brown fox creature with six curled orange tails and a curly tuft of hair on its head, sitting near an elevated stone lantern.",
-  psyduckKoiPond:
-    "On the middle-left area (positioned high up between 45% and 70% vertical height), feature the character Psyduck, rendered in accurate official anime character design style: a chubby yellow duck creature with three black hairs on its head, holding its head with both paws, floating happily on an elevated stone garden fountain.",
-  totoroSpirit:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Totoro, rendered in accurate official anime character design style: a large friendly grey fluffy woodland spirit with tall ears and a white patterned belly, resting comfortably on an elevated tree branch.",
-  noFaceSpirit:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character No-Face (Kaonashi), rendered in accurate official anime character design style: a gentle dark shadow spirit wearing a simple white oval mask, floating softly near lush green leaves.",
-  jijiBlackCat:
-    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature the character Jiji the black cat, rendered in accurate official anime character design style: a sleek black cat with large curious eyes and a red ribbon bow sitting on a second-story wooden window ledge."
+  hangingPaperLantern:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a glowing vintage Japanese paper lantern hanging high from a lush green tree branch.",
+  elevatedRailwaySignal:
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature a tall vintage Japanese railway crossing signal pole with elevated red warning lights and a yellow bell.",
+  balconyGarden:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a charming second-story wooden window balcony with blooming potted flowers and a swaying glass wind chime.",
+  cozyCatWindow:
+    "On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute chubby cat sleeping peacefully on a second-story wooden window ledge.",
+  elevatedToriiGate:
+    "On the middle-left area (positioned high up between 45% and 75% vertical height), feature a traditional red wooden arch structure nestled among soft green mossy rocks and foliage.",
+  vendingMachineEave:
+    "On the middle-left area (positioned high up between 45% and 70% vertical height), feature a retro red Japanese vending machine standing under a warm wooden eave with green potted plants."
 };
 
 export const FOCAL_KEYS = Object.keys(focalElementMap);
