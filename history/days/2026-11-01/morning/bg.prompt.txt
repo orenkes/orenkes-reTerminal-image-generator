@@ -1,17 +1,17 @@
 Create one beautiful full-bleed landscape background image for a weather display, designed for an 800x480 smart screen.
 
 Style:
-refined painterly illustration, soft brushstroke texture, artistic clouds, atmospheric depth, calm and premium look
+nostalgic scenic background art in the style of Studio Ghibli, hand-painted gouache illustration, soft warm daylight, lush green foliage, rustic charm, cozy hand-painted aesthetic, dreamlike landscape
 
 Overall look:
 premium scenic background, elegant, polished, visually rich, calm and inviting, suitable for a home smart display.
 
 Scene:
-a charming quiet water canal in a peaceful Japanese neighborhood, with walking paths, wooden fences, lush green trees, and clear sky reflections.
+a peaceful anime suburban street with a railway crossing, clean residential houses, utility poles with power lines, small green gardens, open sky, and a serene atmosphere.
 The scene should feel like a peaceful, visually captivating anime scenic environment, airy, peaceful, and aesthetically striking.
 
 Focal Subject (Left-Center Placement):
-On the upper-middle left area (positioned high up between 45% and 75% vertical height), feature a cute chubby cat sleeping peacefully on a second-story wooden window ledge.
+On the middle-left area (positioned high up between 45% and 75% vertical height), feature a tall vintage Japanese railway crossing signal pole with elevated red warning lights and a yellow bell.
 
 Time of day:
 morning
@@ -24,7 +24,7 @@ The weather shown in the artwork must match: מעונן.
 Visual atmosphere: bright cloudy summer sky, soft layered cloud cover, diffused daylight, calm warm atmosphere, subtle sunlight filtering through the clouds.
 
 Temperature feel:
-mild comfortable temperatures
+warm pleasant summer day
 
 Composition:
 wide cinematic composition with clear depth, including foreground, midground, and background.
